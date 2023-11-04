@@ -1,28 +1,26 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+	"id": "tofucraft",
   "version": "${version}",
-
-  "name": "Example Mod",
-  "description": "This mod aims to help new BTA modders.",
+	"name": "TofuCraft",
+	"description": "BTA but Tofu!",
   "authors": [
-    "Turnip Labs"
+		"bagu_chan"
   ],
   "contact": {
     "homepage": "",
-    "sources": ""
+		"sources": "https://github.com/baguchan/BetterWithTofuCraft/tree/1.7.7.x"
   },
-
-  "license": "CC0-1.0",
+	"license": "MIT License",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-        "turniplabs.examplemod.ExampleMod"
+			"baguchan.tofucraft.TofuCraft"
     ]
   },
   "mixins": [
-      "examplemod.mixins.json"
+		"tofucraft.mixins.json"
   ],
 
   "depends": {
