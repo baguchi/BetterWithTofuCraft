@@ -10,7 +10,7 @@ public class EntityTofunian extends EntityAnimal {
 		this.health = 20;
 		this.heightOffset = 0.0F;
 		this.footSize = 0.5F;
-		this.moveSpeed = 0.24F;
+		this.moveSpeed = 0.26F;
 		this.highestSkinVariant = -1;
 		this.setSize(0.6F, 1.15F);
 		this.setPos(this.x, this.y, this.z);
@@ -29,17 +29,17 @@ public class EntityTofunian extends EntityAnimal {
 
 	@Override
 	protected String getLivingSound() {
-		return "mob.tofunian.ambient";
+		return "tofucraft.mob.tofunian.tofunian_ambient";
 	}
 
 	@Override
 	protected String getHurtSound() {
-		return "mob.tofunian.hurt";
+		return "tofucraft.mob.tofunian.tofunian_hurt";
 	}
 
 	@Override
 	protected String getDeathSound() {
-		return "mob.tofunian.death";
+		return "tofucraft.mob.tofunian.tofunian_death";
 	}
 
 	protected boolean canDespawn() {

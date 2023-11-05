@@ -18,13 +18,13 @@ public class TofuCraft implements ModInitializer {
 	@Override
     public void onInitialize() {
 		EntityHelper.createEntity(EntityTofunian.class, new RenderTofunian(new ModelTofunian(), 0.5F), 1001, "Tofunian");
-		SoundHelper.addSound(MOD_ID, "block/soul_breath");
-		SoundHelper.addSound(MOD_ID, "item/soy_bean_cracking");
-		SoundHelper.addSound(MOD_ID, "item/soy_bean_cracking2");
-		SoundHelper.addSound(MOD_ID, "mob/tofunian/tofunian_ambient");
-		SoundHelper.addSound(MOD_ID, "mob/tofunian/tofunian_death");
-		SoundHelper.addSound(MOD_ID, "mob/tofunian/tofunian_hurt");
-		SoundHelper.addSound(MOD_ID, "mob/tofunian/tofunian_no");
-		SoundHelper.addSound(MOD_ID, "mob/tofunian/tofunian_yes");
+		SoundHelper.addSound(MOD_ID, "block/soul_breath.wav");
+		SoundHelper.addSound(MOD_ID, "item/soybean/soy_bean_cracking.wav");
+		SoundHelper.addSound(MOD_ID, "item/soybean/soy_bean_cracking2.wav");
+		SoundHelper.addSound(MOD_ID, "mob/tofunian/tofunian_ambient.wav");
+		SoundHelper.addSound(MOD_ID, "mob/tofunian/tofunian_death.wav");
+		SoundHelper.addSound(MOD_ID, "mob/tofunian/tofunian_hurt.wav");
+		SoundHelper.addSound(MOD_ID, "mob/tofunian/tofunian_no.wav");
+		SoundHelper.addSound(MOD_ID, "mob/tofunian/tofunian_yes.wav");
     }
 }
