@@ -12,7 +12,6 @@ public class BlockTofu extends Block {
 	public BlockTofu(String key, int id, Material material) {
 		super(key, id, material);
 	}
-
 	@Override
 	public void randomDisplayTick(World world, int x, int y, int z, Random rand) {
 		super.randomDisplayTick(world, x, y, z, rand);
@@ -46,9 +45,8 @@ public class BlockTofu extends Block {
 		boolean isWeightValid = weightBlock != null
 			&& baseBlock.getIsBlockSolid(world, x, y + 1, z, Side.BOTTOM) && (weightBlock.blockMaterial == Material.stone || weightBlock.blockMaterial == Material.ice) && weightBlock != ModBlocks.ishi_tofu;
 
-		float baseHardness = baseBlock.getHardness();
-		boolean isBaseValid = baseBlock.getIsBlockSolid(world, x, y - 1, z, Side.TOP) &&
-			(baseBlock.blockMaterial == Material.stone || baseBlock.blockMaterial == Material.metal || baseHardness >= 1.0F || baseHardness < 0.0F);
+		boolean isBaseValid = baseBlock != null && baseBlock.getIsBlockSolid(world, x, y - 1, z, Side.TOP) &&
+			(baseBlock.blockMaterial == Material.stone || baseBlock.blockMaterial == Material.metal || baseBlock.getHardness() >= 1.0F || baseBlock.getHardness() < 0.0F);
 
 		return isWeightValid && isBaseValid;
 	}

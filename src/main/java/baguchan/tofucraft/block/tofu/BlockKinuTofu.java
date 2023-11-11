@@ -22,6 +22,7 @@ public class BlockKinuTofu extends BlockTofu {
 		super.updateTick(world, x, y, z, rand);
 		if (rand.nextInt(2) == 0) {
 			if (this.isUnderWeight(world, x, y, z)) {
+				this.dropBlockWithCause(world, EnumDropCause.WORLD, x, y, z, world.getBlockMetadata(x, y, z), null);
 				world.setBlockWithNotify(x, y, z, 0);
 			}
 		}

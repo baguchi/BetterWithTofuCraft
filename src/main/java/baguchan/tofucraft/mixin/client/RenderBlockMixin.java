@@ -1,14 +1,13 @@
 package baguchan.tofucraft.mixin.client;
 
 import baguchan.tofucraft.block.ModBlocks;
+import baguchan.tofucraft.util.FluidUtils;
 import net.minecraft.client.render.RenderBlocks;
 import net.minecraft.client.render.Tessellator;
 import net.minecraft.client.render.TextureFX;
-import net.minecraft.client.render.block.color.BlockColor;
 import net.minecraft.client.render.block.color.BlockColorDispatcher;
 import net.minecraft.core.Global;
 import net.minecraft.core.block.Block;
-import net.minecraft.core.block.BlockFluid;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.util.helper.MathHelper;
 import net.minecraft.core.util.helper.Side;
@@ -33,7 +32,7 @@ public class RenderBlockMixin {
 	public void renderBlockFluids(Block block, int x, int y, int z, CallbackInfoReturnable<Boolean> cir) {
 		if (block.id == ModBlocks.soymilk_flow.id || block.id == ModBlocks.soymilk.id) {
 			Tessellator tessellator = Tessellator.instance;
-			int color = ((BlockColor) BlockColorDispatcher.getInstance().getDispatch(block)).getWorldColor(this.world, x, y, z);
+			int color = BlockColorDispatcher.getInstance().getDispatch(block).getWorldColor(this.world, x, y, z);
 			float colorRed = (float) (color >> 16 & 0xFF) / 255.0f;
 			float colorGreen = (float) (color >> 8 & 0xFF) / 255.0f;
 			float colorBlue = (float) (color & 0xFF) / 255.0f;
@@ -59,7 +58,7 @@ public class RenderBlockMixin {
 			if (this.renderAllFaces || renderTop) {
 				flag2 = true;
 				int j1 = block.getBlockTextureFromSideAndMetadata(Side.TOP, i1);
-				float f12 = (float) BlockFluid.func_293_a(this.blockAccess, x, y, z, material);
+				float f12 = (float) FluidUtils.getVector(this.blockAccess, x, y, z, material);
 				if (f12 > -999.0f) {
 					j1 = block.getBlockTextureFromSideAndMetadata(Side.NORTH, i1);
 				}

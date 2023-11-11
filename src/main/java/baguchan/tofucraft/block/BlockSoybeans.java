@@ -11,6 +11,7 @@ import net.minecraft.core.world.World;
 public class BlockSoybeans extends BlockCrops {
 	public BlockSoybeans(String key, int id) {
 		super(key, id);
+		this.setTickOnLoad(true);
 	}
 
 	@Override
