@@ -4,12 +4,20 @@ tile.tofucraft.ishi_tofu.name=Ishi Tofu
 tile.tofucraft.metal_tofu.name=Metal Tofu
 tile.tofucraft.diamond_tofu.name=Diamond Tofu
 
+tile.tofucraft.soymilk.name=Soymilk
+tile.tofucraft.soymilk_flow.name=Flow Soymilk
+
+tile.tofucraft.soybean.name=Soybean
+
 item.tofucraft.tofukinu.name=Kinu Tofu
 item.tofucraft.tofumomen.name=Momen Tofu
 item.tofucraft.tofuishi.name=Ishi Tofu
 item.tofucraft.tofumetal.name=Metal Tofu
 item.tofucraft.tofudiamond.name=Diamond Tofu
 item.tofucraft.tofu_diamond_nugget.name=Diamond Tofu Nugget
+
+item.tofucraft.bucket_soymilk.name=Soymilk Bucket
+item.tofucraft.seeds_soybeans.name=Soybeen Seeds
 
 item.tofucraft.tofu_kinu_helmet.name=Tofu Kinu Helmet
 item.tofucraft.tofu_kinu_chestplate.name=Tofu Kinu ChestPlate

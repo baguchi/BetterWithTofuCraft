@@ -17,7 +17,10 @@
   "entrypoints": {
     "main": [
 			"baguchan.tofucraft.TofuCraft"
-    ]
+		],
+		"client": [
+			"baguchan.tofucraft.TofuCraftClient"
+		]
   },
   "mixins": [
 		"tofucraft.mixins.json"

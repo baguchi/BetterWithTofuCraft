@@ -4,8 +4,10 @@
   "package": "baguchan.tofucraft.mixin",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
+      "BlockFluidFlowingMixin"
     ],
     "client": [
+      "client.RenderBlockMixin"
     ],
     "injectors": {
         "defaultRequire": 1

@@ -1,19 +1,18 @@
-package baguchan.tofucraft.block;
+package baguchan.tofucraft.block.tofu;
 
+import baguchan.tofucraft.item.ModItems;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.entity.TileEntity;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.enums.EnumDropCause;
-import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.world.World;
 
-public class BlockTofu extends Block {
-	public final Item item;
+public class BlockMetalTofu extends Block {
 
-	public BlockTofu(String key, int id, Material material, Item item) {
+	public BlockMetalTofu(String key, int id, Material material) {
 		super(key, id, material);
-		this.item = item;
+		this.setTickOnLoad(true);
 	}
 
 	@Override
@@ -24,6 +23,6 @@ public class BlockTofu extends Block {
 				return new ItemStack[]{new ItemStack(this)};
 			}
 		}
-		return new ItemStack[]{new ItemStack(this.item, 4)};
+		return new ItemStack[]{new ItemStack(ModItems.tofumetal, 4)};
 	}
 }

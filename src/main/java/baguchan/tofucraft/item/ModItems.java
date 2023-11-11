@@ -1,10 +1,9 @@
 package baguchan.tofucraft.item;
 
 import baguchan.tofucraft.TofuCraft;
+import baguchan.tofucraft.block.ModBlocks;
 import baguchan.tofucraft.util.IDUtils;
-import net.minecraft.core.item.Item;
-import net.minecraft.core.item.ItemArmor;
-import net.minecraft.core.item.ItemFoodStackable;
+import net.minecraft.core.item.*;
 import net.minecraft.core.item.material.ArmorMaterial;
 import turniplabs.halplibe.helper.ArmorHelper;
 import turniplabs.halplibe.helper.ItemHelper;
@@ -12,11 +11,16 @@ import turniplabs.halplibe.helper.ItemHelper;
 import static turniplabs.halplibe.helper.ItemHelper.findOpenIds;
 
 public class ModItems {
+	//tofu
 	public static final Item tofukinu = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemFoodStackable("Tofu Kinu", findOpenIds(IDUtils.getCurrItemId()), 1, false, 32), "tofukinu", "tofukinu.png");
 	public static final Item tofumomen = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemFoodStackable("Tofu Momen", findOpenIds(IDUtils.getCurrItemId()), 2, false, 32), "tofumomen", "tofumomen.png");
 	public static final Item tofuishi = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemFoodStackable("Tofu Ishi", findOpenIds(IDUtils.getCurrItemId()), 2, false, 32), "tofuishi", "tofuishi.png");
 	public static final Item tofumetal = ItemHelper.createItem(TofuCraft.MOD_ID, new Item("Tofu Metal", findOpenIds(IDUtils.getCurrItemId())), "tofumetal", "tofumetal.png");
 	public static final Item tofudiamond = ItemHelper.createItem(TofuCraft.MOD_ID, new Item("Tofu Diamond", findOpenIds(IDUtils.getCurrItemId())), "tofudiamond", "tofudiamond.png");
+	//misc
+	public static final Item soymilk_bucket = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemBucket("Soymilk Bucket", findOpenIds(IDUtils.getCurrItemId()), ModBlocks.soymilk), "bucket_soymilk", "bucket_soymilk.png").setContainerItem(Item.bucket);
+	public static final Item soybeans_seeds = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemSeeds("Soybeans Seeds", findOpenIds(IDUtils.getCurrItemId()), ModBlocks.soybean), "seeds_soybeans", "seeds_soybeans.png");
+
 
 	//armor
 	public static final ArmorMaterial armor_kinu = ArmorHelper.createArmorMaterial("tofu_kinu", 1, 0.0f, 0.0f, 0.0f, 15.0f);
