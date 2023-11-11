@@ -10,7 +10,7 @@ public class EntityTofunian extends EntityAnimal {
 		this.health = 20;
 		this.heightOffset = 0.0F;
 		this.footSize = 0.5F;
-		this.moveSpeed = 1.0F;
+		this.moveSpeed = 0.85F;
 		this.highestSkinVariant = -1;
 		this.setSize(0.6F, 1.15F);
 		this.setPos(this.x, this.y, this.z);

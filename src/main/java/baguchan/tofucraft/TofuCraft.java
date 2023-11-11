@@ -4,6 +4,7 @@ import baguchan.tofucraft.block.ModBlocks;
 import baguchan.tofucraft.entity.EntityTofunian;
 import baguchan.tofucraft.entity.ModelTofunian;
 import baguchan.tofucraft.entity.RenderTofunian;
+import baguchan.tofucraft.item.ModItems;
 import baguchan.tofucraft.util.IDUtils;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -21,8 +22,8 @@ public class TofuCraft implements ModInitializer {
 
 	private void handleConfig() {
 		Properties prop = new Properties();
-		prop.setProperty("starting_block_id", "4000");
-		prop.setProperty("starting_item_id", "40000");
+		prop.setProperty("starting_block_id", "600");
+		prop.setProperty("starting_item_id", "3000");
 		ConfigHandler config = new ConfigHandler(MOD_ID, prop);
 		IDUtils.initIds(
 			config.getInt("starting_block_id"),
@@ -43,5 +44,6 @@ public class TofuCraft implements ModInitializer {
 		SoundHelper.addSound(MOD_ID, "mob/tofunian/tofunian_no.wav");
 		SoundHelper.addSound(MOD_ID, "mob/tofunian/tofunian_yes.wav");
 		ModBlocks.createBlocks();
+		ModItems.createItems();
     }
 }

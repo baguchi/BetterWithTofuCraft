@@ -1,1 +1,37 @@
 tile.tofucraft.kinu_tofu.name=Kinu Tofu
+tile.tofucraft.momen_tofu.name=Momen Tofu
+tile.tofucraft.ishi_tofu.name=Ishi Tofu
+tile.tofucraft.metal_tofu.name=Metal Tofu
+tile.tofucraft.diamond_tofu.name=Diamond Tofu
+
+item.tofucraft.tofukinu.name=Kinu Tofu
+item.tofucraft.tofumomen.name=Momen Tofu
+item.tofucraft.tofuishi.name=Ishi Tofu
+item.tofucraft.tofumetal.name=Metal Tofu
+item.tofucraft.tofudiamond.name=Diamond Tofu
+item.tofucraft.tofu_diamond_nugget.name=Diamond Tofu Nugget
+
+item.tofucraft.tofu_kinu_helmet.name=Tofu Kinu Helmet
+item.tofucraft.tofu_kinu_chestplate.name=Tofu Kinu ChestPlate
+item.tofucraft.tofu_kinu_leggings.name=Tofu Kinu Leggings
+item.tofucraft.tofu_kinu_boots.name=Tofu Kinu Boots
+
+item.tofucraft.tofu_momen_helmet.name=Tofu Momen Helmet
+item.tofucraft.tofu_momen_chestplate.name=Tofu Momen ChestPlate
+item.tofucraft.tofu_momen_leggings.name=Tofu Momen Leggings
+item.tofucraft.tofu_momen_boots.name=Tofu Momen Boots
+
+item.tofucraft.tofu_solid_helmet.name=Tofu Solid Helmet
+item.tofucraft.tofu_solid_chestplate.name=Tofu Solid ChestPlate
+item.tofucraft.tofu_solid_leggings.name=Tofu Solid Leggings
+item.tofucraft.tofu_solid_boots.name=Tofu Solid Boots
+
+item.tofucraft.tofu_metal_helmet.name=Tofu Metal Helmet
+item.tofucraft.tofu_metal_chestplate.name=Tofu Metal ChestPlate
+item.tofucraft.tofu_metal_leggings.name=Tofu Metal Leggings
+item.tofucraft.tofu_metal_boots.name=Tofu Metal Boots
+
+item.tofucraft.tofu_diamond_helmet.name=Tofu Diamond Helmet
+item.tofucraft.tofu_diamond_chestplate.name=Tofu Diamond ChestPlate
+item.tofucraft.tofu_diamond_leggings.name=Tofu Diamond Leggings
+item.tofucraft.tofu_diamond_boots.name=Tofu Diamond Boots
