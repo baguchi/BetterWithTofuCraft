@@ -31,7 +31,7 @@ public class RenderBlockMixin {
 
 	@Inject(method = "renderBlockFluids", at = @At("HEAD"), cancellable = true)
 	public void renderBlockFluids(Block block, int x, int y, int z, CallbackInfoReturnable<Boolean> cir) {
-		if (block.id == ModBlocks.soymilk_flow.id) {
+		if (block.id == ModBlocks.soymilk_flow.id || block.id == ModBlocks.soymilk.id) {
 			Tessellator tessellator = Tessellator.instance;
 			int color = ((BlockColor) BlockColorDispatcher.getInstance().getDispatch(block)).getWorldColor(this.world, x, y, z);
 			float colorRed = (float) (color >> 16 & 0xFF) / 255.0f;
@@ -69,12 +69,13 @@ public class RenderBlockMixin {
 				double d3 = ((double) k2 + (double) (TextureFX.tileWidthTerrain / 2)) / (double) (TextureFX.tileWidthTerrain * Global.TEXTURE_ATLAS_WIDTH_TILES);
 				if (f12 < -999.0f) {
 					f12 = 0.0f;
-				} else {
-					d2 = (float) (i2 + TextureFX.tileWidthTerrain) / (float) (TextureFX.tileWidthTerrain * Global.TEXTURE_ATLAS_WIDTH_TILES);
-					d3 = (float) (k2 + TextureFX.tileWidthTerrain) / (float) (TextureFX.tileWidthTerrain * Global.TEXTURE_ATLAS_WIDTH_TILES);
 				}
 				float f14 = MathHelper.sin(f12) * (float) (TextureFX.tileWidthTerrain / 2) / (float) (TextureFX.tileWidthTerrain * Global.TEXTURE_ATLAS_WIDTH_TILES);
 				float f16 = MathHelper.cos(f12) * (float) (TextureFX.tileWidthTerrain / 2) / (float) (TextureFX.tileWidthTerrain * Global.TEXTURE_ATLAS_WIDTH_TILES);
+
+				f14 *= 0.5F;
+				f16 *= 0.5F;
+
 				float f18 = this.getBlockBrightness(this.blockAccess, x, y, z);
 				tessellator.setColorOpaque_F(f4 * f18 * colorRed, f4 * f18 * colorGreen, f4 * f18 * colorBlue);
 				tessellator.addVertexWithUV(x + 0, (float) y + f7, z + 0, d2 - (double) f16 - (double) f14, d3 - (double) f16 + (double) f14);
