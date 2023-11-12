@@ -57,17 +57,22 @@ public class ModBlocks {
 		.setTextures("soymilk.png")
 		.setHardness(100.0f)
 		.setTags(BlockTags.IS_WATER, BlockTags.PLACE_OVERWRITES, BlockTags.NOT_IN_CREATIVE_MENU)
-		.build(new BlockFluidFlowing("soymilk", findOpenIds(IDUtils.getCurrBlockId()), ModMaterials.soymilk_material).withLightOpacity(3).withDisabledStats().withDisabledNeighborNotifyOnMetadataChange());
+		.setVisualUpdateOnMetadata()
+		.build(new BlockFluidFlowing("soymilk", findOpenIds(IDUtils.getCurrBlockId()), ModMaterials.soymilk_material).withLightOpacity(3).withDisabledStats());
 	public static final Block soymilk_flow = new BlockBuilder(TofuCraft.MOD_ID)
 		.setTextures("soymilk_flow.png")
 		.setHardness(100.0f)
+		.setVisualUpdateOnMetadata()
 		.setTags(BlockTags.IS_WATER, BlockTags.PLACE_OVERWRITES, BlockTags.NOT_IN_CREATIVE_MENU)
-		.build(new BlockFluidStill("soymilk_flow", findOpenIds(IDUtils.getCurrBlockId()), ModMaterials.soymilk_material).withLightOpacity(3).withDisabledStats().withDisabledNeighborNotifyOnMetadataChange());
+		.build(new BlockFluidStill("soymilk_flow", findOpenIds(IDUtils.getCurrBlockId()), ModMaterials.soymilk_material).withLightOpacity(3).withDisabledStats());
 	public static final Block soybean = new BlockBuilder(TofuCraft.MOD_ID)
 		.setTextures("soybean.png")
+		.setHardness(0.0f)
+		.setVisualUpdateOnMetadata()
 		.setBlockSound(BlockSounds.GRASS)
+		.setTags(BlockTags.BROKEN_BY_FLUIDS, BlockTags.NOT_IN_CREATIVE_MENU)
 		.setTickOnLoad()
-		.build(new BlockSoybeans("soybean", findOpenIds(IDUtils.getCurrBlockId())).withHardness(0.0f).withDisabledStats().withDisabledNeighborNotifyOnMetadataChange().withTags(BlockTags.BROKEN_BY_FLUIDS, BlockTags.NOT_IN_CREATIVE_MENU));
+		.build(new BlockSoybeans("soybean", findOpenIds(IDUtils.getCurrBlockId())).withDisabledStats());
 
 
 	public static void createBlocks() {
