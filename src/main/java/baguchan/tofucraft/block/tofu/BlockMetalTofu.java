@@ -12,7 +12,6 @@ public class BlockMetalTofu extends Block {
 
 	public BlockMetalTofu(String key, int id, Material material) {
 		super(key, id, material);
-		this.setTickOnLoad(true);
 	}
 
 	@Override

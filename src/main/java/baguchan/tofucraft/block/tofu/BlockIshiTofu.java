@@ -20,9 +20,12 @@ public class BlockIshiTofu extends BlockTofu {
 	@Override
 	public void updateTick(World world, int x, int y, int z, Random rand) {
 		super.updateTick(world, x, y, z, rand);
-		if (rand.nextInt(10) == 0) {
-			if (this.isUnderWeight(world, x, y, z)) {
+		if (rand.nextInt(5) == 0) {
+			int meta = world.getBlockMetadata(x, y, z);
+			if (meta >= 7) {
 				world.setBlock(x, y, z, ModBlocks.metal_tofu.id);
+			} else {
+				world.setBlockMetadata(x, y, z, meta + 1);
 			}
 		}
 	}
