@@ -71,13 +71,20 @@ public class ModBlocks {
 		.setTags(BlockTags.IS_WATER, BlockTags.PLACE_OVERWRITES, BlockTags.NOT_IN_CREATIVE_MENU)
 		.build(new BlockFluidStill("soymilk", findOpenIds(IDUtils.getCurrBlockId()), ModMaterials.soymilk_material).withLightOpacity(3).withDisabledStats());
 	public static final Block soybean = new BlockBuilder(TofuCraft.MOD_ID)
-		.setTextures("soybean.png")
 		.setHardness(0.0f)
 		.setVisualUpdateOnMetadata()
 		.setBlockSound(BlockSounds.GRASS)
 		.setTags(BlockTags.BROKEN_BY_FLUIDS, BlockTags.NOT_IN_CREATIVE_MENU)
 		.setTickOnLoad()
 		.build(new BlockSoybeans("soybean", findOpenIds(IDUtils.getCurrBlockId())).withDisabledStats());
+	public static final Block wild_soybean = new BlockBuilder(TofuCraft.MOD_ID)
+		.setTextures("soybean_4.png")
+		.setHardness(0.0f)
+		.setVisualUpdateOnMetadata()
+		.setBlockSound(BlockSounds.GRASS)
+		.setTags(BlockTags.BROKEN_BY_FLUIDS, BlockTags.NOT_IN_CREATIVE_MENU)
+		.setTickOnLoad()
+		.build(new BlockWildSoybeans("wild_soybean", findOpenIds(IDUtils.getCurrBlockId())).withDisabledStats());
 
 
 	public static void createBlocks() {

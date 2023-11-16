@@ -13,5 +13,6 @@ public class TofuCraftClient implements ClientModInitializer {
 		dispatcher.addDispatch(ModBlocks.soymilk_flow, new BlockModelRenderBlocks(4));
 		dispatcher.addDispatch(ModBlocks.soymilk, new BlockModelRenderBlocks(4));
 		dispatcher.addDispatch(ModBlocks.soybean, new BlockModelRenderBlocks(6));
+		dispatcher.addDispatch(ModBlocks.wild_soybean, new BlockModelRenderBlocks(6));
 	}
 }
