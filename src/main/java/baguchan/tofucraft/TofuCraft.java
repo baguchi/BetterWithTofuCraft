@@ -1,6 +1,7 @@
 package baguchan.tofucraft;
 
 import baguchan.tofucraft.block.ModBlocks;
+import baguchan.tofucraft.crafting.ModCraftings;
 import baguchan.tofucraft.entity.EntityTofunian;
 import baguchan.tofucraft.entity.ModelTofunian;
 import baguchan.tofucraft.entity.RenderTofunian;
@@ -45,5 +46,6 @@ public class TofuCraft implements ModInitializer {
 		SoundHelper.addSound(MOD_ID, "mob/tofunian/tofunian_yes.wav");
 		ModBlocks.createBlocks();
 		ModItems.createItems();
+		ModCraftings.register();
     }
 }

@@ -103,5 +103,25 @@ public class ModCraftings {
 			"T T",
 			"T T",
 			'T', ModBlocks.metal_tofu});
+
+
+		RecipeHelper.Crafting.createRecipe(ModItems.armorHelmetTofuDiamond, 1, new Object[]{
+			"TTT",
+			"T T",
+			'T', ModBlocks.diamond_tofu});
+		RecipeHelper.Crafting.createRecipe(ModItems.armorChestplateTofuDiamond, 1, new Object[]{
+			"T T",
+			"TTT",
+			"TTT",
+			'T', ModBlocks.diamond_tofu});
+		RecipeHelper.Crafting.createRecipe(ModItems.armorLeggingsTofuDiamond, 1, new Object[]{
+			"TTT",
+			"T T",
+			"T T",
+			'T', ModBlocks.diamond_tofu});
+		RecipeHelper.Crafting.createRecipe(ModItems.armorBootsTofuDiamond, 1, new Object[]{
+			"T T",
+			"T T",
+			'T', ModBlocks.diamond_tofu});
 	}
 }
