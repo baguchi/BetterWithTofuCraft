@@ -19,6 +19,9 @@ item.tofucraft.tofu_diamond_nugget.name=Diamond Tofu Nugget
 
 item.tofucraft.bucket_soymilk.name=Soymilk Bucket
 item.tofucraft.seeds_soybeans.name=Soybeen Seeds
+item.tofucraft.bucket_bittern.name=Bittern Bucket
+item.tofucraft.bittern_jar.name=Bittern Jar
+
 
 item.tofucraft.tofu_kinu_helmet.name=Tofu Kinu Helmet
 item.tofucraft.tofu_kinu_chestplate.name=Tofu Kinu ChestPlate
@@ -44,3 +47,9 @@ item.tofucraft.tofu_diamond_helmet.name=Tofu Diamond Helmet
 item.tofucraft.tofu_diamond_chestplate.name=Tofu Diamond ChestPlate
 item.tofucraft.tofu_diamond_leggings.name=Tofu Diamond Leggings
 item.tofucraft.tofu_diamond_boots.name=Tofu Diamond Boots
+
+achievements.page.tofucraft.desc=TofuCraft
+achievement.tofucraft.make_bittern=Make Bittern
+achievement.tofucraft.make_bittern.desc=Smelt the water bucket and make bittern.
+achievement.tofucraft.harden_to_tofu=Harder!
+achievement.tofucraft.harden_to_tofu.desc=use bittern jar to soymilk.

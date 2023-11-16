@@ -2,6 +2,8 @@ package baguchan.tofucraft.crafting;
 
 import baguchan.tofucraft.block.ModBlocks;
 import baguchan.tofucraft.item.ModItems;
+import net.minecraft.core.item.Item;
+import net.minecraft.core.item.ItemStack;
 import turniplabs.halplibe.helper.RecipeHelper;
 
 public class ModCraftings {
@@ -123,5 +125,9 @@ public class ModCraftings {
 			"T T",
 			"T T",
 			'T', ModBlocks.diamond_tofu});
+
+		RecipeHelper.Smelting.createRecipe(ModItems.bittern_bucket, Item.bucketWater);
+
+		RecipeHelper.Crafting.createShapelessRecipe(new ItemStack(ModItems.bittern_jar, 3), new Object[]{Item.jar, Item.jar, Item.jar, ModItems.bittern_bucket});
 	}
 }

@@ -1,5 +1,6 @@
 package baguchan.tofucraft;
 
+import baguchan.tofucraft.achievement.ModAchievement;
 import baguchan.tofucraft.block.ModBlocks;
 import baguchan.tofucraft.crafting.ModCraftings;
 import baguchan.tofucraft.entity.EntityTofunian;
@@ -10,9 +11,11 @@ import baguchan.tofucraft.util.IDUtils;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import turniplabs.halplibe.helper.AchievementHelper;
 import turniplabs.halplibe.helper.EntityHelper;
 import turniplabs.halplibe.helper.SoundHelper;
 import turniplabs.halplibe.util.ConfigHandler;
+import turniplabs.halplibe.util.achievements.AchievementPage;
 
 import java.util.Properties;
 
@@ -21,6 +24,7 @@ public class TofuCraft implements ModInitializer {
 	public static final String MOD_ID = "tofucraft";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+	public static AchievementPage tofu_page;
 	private void handleConfig() {
 		Properties prop = new Properties();
 		prop.setProperty("starting_block_id", "600");
@@ -47,5 +51,7 @@ public class TofuCraft implements ModInitializer {
 		ModBlocks.createBlocks();
 		ModItems.createItems();
 		ModCraftings.register();
+		tofu_page = new ModAchievement();
+		AchievementHelper.addPage(tofu_page);
     }
 }
