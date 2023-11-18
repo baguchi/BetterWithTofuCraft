@@ -34,17 +34,19 @@ public class TofuCraft implements ModInitializer {
 	public static Dimension tofuDimension;
 	public static WorldType tofuWorld;
 	public static int tofuWorldID;
+	public static int entityID;
 
 	private void handleConfig() {
 		Properties prop = new Properties();
 		prop.setProperty("starting_block_id", "600");
 		prop.setProperty("starting_item_id", "3000");
+		prop.setProperty("starting_entity_id", "1000");
 		prop.setProperty("tofu_world_id", "3");
 		ConfigHandler config = new ConfigHandler(MOD_ID, prop);
 		IDUtils.initIds(
 			config.getInt("starting_block_id"),
 			config.getInt("starting_item_id"));
-
+		entityID = config.getInt("starting_entity_id");
 		tofuWorldID = config.getInt("tofu_world_id");
 		config.updateConfig();
 	}
@@ -52,7 +54,7 @@ public class TofuCraft implements ModInitializer {
 	@Override
     public void onInitialize() {
 		handleConfig();
-		EntityHelper.createEntity(EntityTofunian.class, new RenderTofunian(new ModelTofunian(), 0.5F), 1001, "Tofunian");
+		EntityHelper.createEntity(EntityTofunian.class, new RenderTofunian(new ModelTofunian(), 0.5F), entityID + 1, "Tofunian");
 		SoundHelper.addSound(MOD_ID, "block/soul_breath.wav");
 		SoundHelper.addSound(MOD_ID, "item/soybean/soy_bean_cracking.wav");
 		SoundHelper.addSound(MOD_ID, "item/soybean/soy_bean_cracking2.wav");

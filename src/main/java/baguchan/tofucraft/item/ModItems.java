@@ -5,6 +5,8 @@ import baguchan.tofucraft.block.ModBlocks;
 import baguchan.tofucraft.util.IDUtils;
 import net.minecraft.core.item.*;
 import net.minecraft.core.item.material.ArmorMaterial;
+import net.minecraft.core.item.material.ToolMaterial;
+import net.minecraft.core.item.tool.*;
 import turniplabs.halplibe.helper.ArmorHelper;
 import turniplabs.halplibe.helper.ItemHelper;
 
@@ -59,6 +61,48 @@ public class ModItems {
 	public static final Item armorChestplateTofuDiamond = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Diamond Chestplate", findOpenIds(IDUtils.getCurrItemId()), armor_tofu_diamond, 1), "tofu_diamond_chestplate", "tofu_diamond_chestplate.png");
 	public static final Item armorLeggingsTofuDiamond = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Diamond Leggings", findOpenIds(IDUtils.getCurrItemId()), armor_tofu_diamond, 2), "tofu_diamond_leggings", "tofu_diamond_leggings.png");
 	public static final Item armorBootsTofuDiamond = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Diamond Boots", findOpenIds(IDUtils.getCurrItemId()), armor_tofu_diamond, 3), "tofu_diamond_boots", "tofu_diamond_boots.png");
+	public static final Item tofu_stick = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemTofuStick("Tofu Stick", findOpenIds(IDUtils.getCurrItemId())), "tofu_stick", "tofustick.png");
+	//tool
+	public static final ToolMaterial tool_kinu = new ToolMaterial().setDurability(1).setEfficiency(1.05f, 1.05f).setMiningLevel(0);
+
+	public static final Item swordTofuKinu = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolSword("Tofu Kinu Sword", findOpenIds(IDUtils.getCurrItemId()), tool_kinu), "tofu_kinu_sword", "tofu_kinu_sword.png");
+	public static final Item pickaxeTofuKinu = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolPickaxe("Tofu Kinu Pickaxe", findOpenIds(IDUtils.getCurrItemId()), tool_kinu), "tofu_kinu_pickaxe", "tofu_kinu_pickaxe.png");
+	public static final Item axeTofuKinu = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolAxe("Tofu Kinu Axe", findOpenIds(IDUtils.getCurrItemId()), tool_kinu), "tofu_kinu_axe", "tofu_kinu_axe.png");
+	public static final Item shovelTofuKinu = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolShovel("Tofu Kinu Shovel", findOpenIds(IDUtils.getCurrItemId()), tool_kinu), "tofu_kinu_shovel", "tofu_kinu_shovel.png");
+	public static final Item hoeTofuKinu = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolHoe("Tofu Kinu Hoe", findOpenIds(IDUtils.getCurrItemId()), tool_kinu), "tofu_kinu_hoe", "tofu_kinu_hoe.png");
+
+
+	public static final ToolMaterial tool_momen = new ToolMaterial().setDurability(1).setEfficiency(1.05f, 1.05f).setMiningLevel(0);
+
+	public static final Item swordTofuMomen = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolSword("Tofu Momen Sword", findOpenIds(IDUtils.getCurrItemId()), tool_momen), "tofu_momen_sword", "tofu_momen_sword.png");
+	public static final Item pickaxeTofuMomen = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolPickaxe("Tofu Momen Pickaxe", findOpenIds(IDUtils.getCurrItemId()), tool_momen), "tofu_momen_pickaxe", "tofu_momen_pickaxe.png");
+	public static final Item axeTofuMomen = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolAxe("Tofu Momen Axe", findOpenIds(IDUtils.getCurrItemId()), tool_momen), "tofu_momen_axe", "tofu_momen_axe.png");
+	public static final Item shovelTofuMomen = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolShovel("Tofu Momen Shovel", findOpenIds(IDUtils.getCurrItemId()), tool_momen), "tofu_momen_shovel", "tofu_momen_shovel.png");
+	public static final Item hoeTofuMomen = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolHoe("Tofu Momen Hoe", findOpenIds(IDUtils.getCurrItemId()), tool_momen), "tofu_momen_hoe", "tofu_momen_hoe.png");
+
+	public static final ToolMaterial tool_solid = new ToolMaterial().setDurability(120).setEfficiency(4.0f, 6.0f).setMiningLevel(1);
+
+	public static final Item swordTofuSolid = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolSword("Tofu Solid Sword", findOpenIds(IDUtils.getCurrItemId()), tool_solid), "tofu_solid_sword", "tofu_solid_sword.png");
+	public static final Item pickaxeTofuSolid = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolPickaxe("Tofu Solid Pickaxe", findOpenIds(IDUtils.getCurrItemId()), tool_solid), "tofu_solid_pickaxe", "tofu_solid_pickaxe.png");
+	public static final Item axeTofuSolid = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolAxe("Tofu Solid Axe", findOpenIds(IDUtils.getCurrItemId()), tool_solid), "tofu_solid_axe", "tofu_solid_axe.png");
+	public static final Item shovelTofuSolid = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolShovel("Tofu Solid Shovel", findOpenIds(IDUtils.getCurrItemId()), tool_solid), "tofu_solid_shovel", "tofu_solid_shovel.png");
+	public static final Item hoeTofuSolid = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolHoe("Tofu Solid Hoe", findOpenIds(IDUtils.getCurrItemId()), tool_solid), "tofu_solid_hoe", "tofu_solid_hoe.png");
+
+	public static final ToolMaterial tool_metal = new ToolMaterial().setDurability(250).setEfficiency(6.0f, 8.0f).setMiningLevel(2);
+
+	public static final Item swordTofuMetal = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolSword("Tofu Metal Sword", findOpenIds(IDUtils.getCurrItemId()), tool_metal), "tofu_metal_sword", "tofu_metal_sword.png");
+	public static final Item pickaxeTofuMetal = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolPickaxe("Tofu Metal Pickaxe", findOpenIds(IDUtils.getCurrItemId()), tool_metal), "tofu_metal_pickaxe", "tofu_metal_pickaxe.png");
+	public static final Item axeTofuMetal = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolAxe("Tofu Metal Axe", findOpenIds(IDUtils.getCurrItemId()), tool_metal), "tofu_metal_axe", "tofu_metal_axe.png");
+	public static final Item shovelTofuMetal = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolShovel("Tofu Metal Shovel", findOpenIds(IDUtils.getCurrItemId()), tool_metal), "tofu_metal_shovel", "tofu_metal_shovel.png");
+	public static final Item hoeTofuMetal = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolHoe("Tofu Metal Hoe", findOpenIds(IDUtils.getCurrItemId()), tool_metal), "tofu_metal_hoe", "tofu_metal_hoe.png");
+
+	public static final ToolMaterial tool_diamond = new ToolMaterial().setDurability(1324).setEfficiency(12.0f, 40.0f).setMiningLevel(3);
+
+	public static final Item swordTofuDiamond = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolSword("Tofu Diamond Sword", findOpenIds(IDUtils.getCurrItemId()), tool_diamond), "tofu_diamond_sword", "tofu_diamond_sword.png");
+	public static final Item pickaxeTofuDiamond = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolPickaxe("Tofu Diamond Pickaxe", findOpenIds(IDUtils.getCurrItemId()), tool_diamond), "tofu_diamond_pickaxe", "tofu_diamond_pickaxe.png");
+	public static final Item axeTofuDiamond = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolAxe("Tofu Diamond Axe", findOpenIds(IDUtils.getCurrItemId()), tool_diamond), "tofu_diamond_axe", "tofu_diamond_axe.png");
+	public static final Item shovelTofuDiamond = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolShovel("Tofu Diamond Shovel", findOpenIds(IDUtils.getCurrItemId()), tool_diamond), "tofu_diamond_shovel", "tofu_diamond_shovel.png");
+	public static final Item hoeTofuDiamond = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolHoe("Tofu Diamond Hoe", findOpenIds(IDUtils.getCurrItemId()), tool_metal), "tofu_diamond_hoe", "tofu_diamond_hoe.png");
 
 
 	public static void createItems() {

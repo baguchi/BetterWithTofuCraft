@@ -146,7 +146,163 @@ public class ModCraftings {
 			"T T",
 			"T T",
 			'T', ModBlocks.diamond_tofu});
+		//tool
+		RecipeHelper.Crafting.createRecipe(ModItems.swordTofuKinu, 1, new Object[]{
+			"T",
+			"T",
+			"S",
+			'T', ModBlocks.kinu_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.pickaxeTofuKinu, 1, new Object[]{
+			"TTT",
+			" S ",
+			" S ",
+			'T', ModBlocks.kinu_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.axeTofuKinu, 1, new Object[]{
+			"TT",
+			"TS",
+			" S",
+			'T', ModBlocks.kinu_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.shovelTofuKinu, 1, new Object[]{
+			"T",
+			"S",
+			"S",
+			'T', ModBlocks.kinu_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.hoeTofuKinu, 1, new Object[]{
+			"TT",
+			" S",
+			" S",
+			'T', ModBlocks.kinu_tofu,
+			'S', Item.stick});
 
+		RecipeHelper.Crafting.createRecipe(ModItems.swordTofuMomen, 1, new Object[]{
+			"T",
+			"T",
+			"S",
+			'T', ModBlocks.momen_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.pickaxeTofuMomen, 1, new Object[]{
+			"TTT",
+			" S ",
+			" S ",
+			'T', ModBlocks.momen_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.axeTofuMomen, 1, new Object[]{
+			"TT",
+			"TS",
+			" S",
+			'T', ModBlocks.momen_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.shovelTofuMomen, 1, new Object[]{
+			"T",
+			"S",
+			"S",
+			'T', ModBlocks.momen_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.hoeTofuMomen, 1, new Object[]{
+			"TT",
+			" S",
+			" S",
+			'T', ModBlocks.momen_tofu,
+			'S', Item.stick});
+
+		RecipeHelper.Crafting.createRecipe(ModItems.swordTofuSolid, 1, new Object[]{
+			"T",
+			"T",
+			"S",
+			'T', ModBlocks.ishi_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.pickaxeTofuSolid, 1, new Object[]{
+			"TTT",
+			" S ",
+			" S ",
+			'T', ModBlocks.ishi_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.axeTofuSolid, 1, new Object[]{
+			"TT",
+			"TS",
+			" S",
+			'T', ModBlocks.ishi_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.shovelTofuSolid, 1, new Object[]{
+			"T",
+			"S",
+			"S",
+			'T', ModBlocks.ishi_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.hoeTofuSolid, 1, new Object[]{
+			"TT",
+			" S",
+			" S",
+			'T', ModBlocks.ishi_tofu,
+			'S', Item.stick});
+
+		RecipeHelper.Crafting.createRecipe(ModItems.swordTofuMetal, 1, new Object[]{
+			"T",
+			"T",
+			"S",
+			'T', ModBlocks.metal_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.pickaxeTofuMetal, 1, new Object[]{
+			"TTT",
+			" S ",
+			" S ",
+			'T', ModBlocks.metal_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.axeTofuMetal, 1, new Object[]{
+			"TT",
+			"TS",
+			" S",
+			'T', ModBlocks.metal_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.shovelTofuMetal, 1, new Object[]{
+			"T",
+			"S",
+			"S",
+			'T', ModBlocks.metal_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.hoeTofuMetal, 1, new Object[]{
+			"TT",
+			" S",
+			" S",
+			'T', ModBlocks.metal_tofu,
+			'S', Item.stick});
+
+		RecipeHelper.Crafting.createRecipe(ModItems.swordTofuDiamond, 1, new Object[]{
+			"T",
+			"T",
+			"S",
+			'T', ModBlocks.diamond_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.pickaxeTofuDiamond, 1, new Object[]{
+			"TTT",
+			" S ",
+			" S ",
+			'T', ModBlocks.diamond_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.axeTofuDiamond, 1, new Object[]{
+			"TT",
+			"TS",
+			" S",
+			'T', ModBlocks.diamond_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.shovelTofuDiamond, 1, new Object[]{
+			"T",
+			"S",
+			"S",
+			'T', ModBlocks.diamond_tofu,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModItems.hoeTofuDiamond, 1, new Object[]{
+			"TT",
+			" S",
+			" S",
+			'T', ModBlocks.diamond_tofu,
+			'S', Item.stick});
+
+		//misc
 		RecipeHelper.Smelting.createRecipe(ModItems.bittern_bucket, Item.bucketWater);
 		RecipeHelper.Smelting.createRecipe(ModItems.boiled_edamame, ModItems.edamame);
 

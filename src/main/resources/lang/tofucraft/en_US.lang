@@ -58,6 +58,38 @@ item.tofucraft.tofu_diamond_chestplate.name=Tofu Diamond ChestPlate
 item.tofucraft.tofu_diamond_leggings.name=Tofu Diamond Leggings
 item.tofucraft.tofu_diamond_boots.name=Tofu Diamond Boots
 
+item.tofucraft.tofu_kinu_sword.name=Tofu Kinu Sword
+item.tofucraft.tofu_kinu_pickaxe.name=Tofu Kinu Pickaxe
+item.tofucraft.tofu_kinu_axe.name=Tofu Kinu Axe
+item.tofucraft.tofu_kinu_shovel.name=Tofu Kinu Shovel
+item.tofucraft.tofu_kinu_hoe.name=Tofu Kinu Hoe
+
+item.tofucraft.tofu_momen_sword.name=Tofu Momen Sword
+item.tofucraft.tofu_momen_pickaxe.name=Tofu Momen Pickaxe
+item.tofucraft.tofu_momen_axe.name=Tofu Momen Axe
+item.tofucraft.tofu_momen_shovel.name=Tofu Momen Shovel
+item.tofucraft.tofu_momen_hoe.name=Tofu Momen Hoe
+
+item.tofucraft.tofu_solid_sword.name=Tofu Solid Sword
+item.tofucraft.tofu_solid_pickaxe.name=Tofu Solid Pickaxe
+item.tofucraft.tofu_solid_axe.name=Tofu Solid Axe
+item.tofucraft.tofu_solid_shovel.name=Tofu Solid Shovel
+item.tofucraft.tofu_solid_hoe.name=Tofu Solid Hoe
+
+item.tofucraft.tofu_metal_sword.name=Tofu Metal Sword
+item.tofucraft.tofu_metal_pickaxe.name=Tofu Metal Pickaxe
+item.tofucraft.tofu_metal_axe.name=Tofu Metal Axe
+item.tofucraft.tofu_metal_shovel.name=Tofu Metal Shovel
+item.tofucraft.tofu_metal_hoe.name=Tofu Metal Hoe
+
+item.tofucraft.tofu_diamond_sword.name=Tofu Diamond Sword
+item.tofucraft.tofu_diamond_pickaxe.name=Tofu Diamond Pickaxe
+item.tofucraft.tofu_diamond_axe.name=Tofu Diamond Axe
+item.tofucraft.tofu_diamond_shovel.name=Tofu Diamond Shovel
+item.tofucraft.tofu_diamond_hoe.name=Tofu Diamond Hoe
+
+item.tofucraft.tofu_stick.name=Tofu Stick
+
 achievements.page.tofucraft.desc=TofuCraft
 achievement.tofucraft.make_bittern=Make Bittern
 achievement.tofucraft.make_bittern.desc=Smelt the water bucket and make bittern.
