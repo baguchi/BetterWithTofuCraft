@@ -2,20 +2,23 @@
 
 TofuCraft but Better Than Adventure
 
-## Prerequisites
+This mod is a backport version of tofucraftreload, a mod I'm making.
 
-Babric:
+Soybean. Tofu. Tofu... something?
 
-https://github.com/Turnip-Labs/babric-instance-repo/releases
+Tofu World coming soon...
 
-BTA_Babric_PrismaticLibe:
+## original:
 
-https://github.com/UselessBullets/BTA_Babric_PrismaticLibe
+https://www.curseforge.com/minecraft/mc-mods/tofucraftreload
 
-bta-halplibe:
+## need mod:
 
-https://github.com/Turnip-Labs/bta-halplibe
+Halplibe https://github.com/Turnip-Labs/bta-halplibe
 
-## original
+prismatic https://github.com/UselessBullets/BTA_Babric_PrismaticLibe
 
- 
+Better AI BTA: https://bta-modding.nouma-vallee.fr/bagu_chan/betterai/
+
+Terrain API: https://bta-modding.nouma-vallee.fr/Useless/terrainapi/ 
+
