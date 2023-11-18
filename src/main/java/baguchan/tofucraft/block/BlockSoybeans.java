@@ -44,6 +44,10 @@ public class BlockSoybeans extends BlockCrops {
 
 	@Override
 	public ItemStack[] getBreakResult(World world, EnumDropCause dropCause, int x, int y, int z, int meta, TileEntity tileEntity) {
+		if (meta == 6) {
+			return new ItemStack[]{new ItemStack(ModItems.edamame, world.rand.nextInt(3) + 3)};
+		}
+
 		if (meta != 7) {
 			return new ItemStack[]{new ItemStack(ModItems.soybeans_seeds)};
 		}

@@ -20,6 +20,8 @@ public class ModItems {
 	//misc
 	public static final Item soymilk_bucket = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemBucket("Soymilk Bucket", findOpenIds(IDUtils.getCurrItemId()), ModBlocks.soymilk), "bucket_soymilk", "bucket_soymilk.png").setContainerItem(Item.bucket);
 	public static final Item soybeans_seeds = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemSeeds("Soybeans Seeds", findOpenIds(IDUtils.getCurrItemId()), ModBlocks.soybean), "seeds_soybeans", "seeds_soybeans.png");
+	public static final Item edamame = ItemHelper.createItem(TofuCraft.MOD_ID, new Item("Edamame", findOpenIds(IDUtils.getCurrItemId())), "edamame", "edamame.png");
+	public static final Item boiled_edamame = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemFoodStackable("Boiled Edamame", findOpenIds(IDUtils.getCurrItemId()), 1, false, 16), "edamame_boiled", "edamame_boiled.png");
 	public static final Item bittern_bucket = ItemHelper.createItem(TofuCraft.MOD_ID, new Item("Bittern Bucket", findOpenIds(IDUtils.getCurrItemId())), "bucket_bittern", "bucket_bittern.png").setMaxStackSize(1).setContainerItem(Item.bucket);
 	public static final Item bittern_jar = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemBitternJar("Bittern Jar", findOpenIds(IDUtils.getCurrItemId())), "bittern_jar", "bittern_jar.png");
 
