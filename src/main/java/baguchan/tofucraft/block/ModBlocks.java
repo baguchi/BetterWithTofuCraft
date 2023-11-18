@@ -5,6 +5,8 @@ import baguchan.tofucraft.block.tofu.*;
 import baguchan.tofucraft.util.IDUtils;
 import net.minecraft.client.sound.block.BlockSounds;
 import net.minecraft.core.block.Block;
+import net.minecraft.core.block.BlockBedrock;
+import net.minecraft.core.block.BlockPortal;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.item.Item;
@@ -53,6 +55,14 @@ public class ModBlocks {
 		.setTags(BlockTags.MINEABLE_BY_PICKAXE)
 		.setBlockSound(BlockSounds.METAL)
 		.build(new BlockDiamondTofu("diamond_tofu", findOpenIds(IDUtils.getCurrBlockId()), Material.metal));
+	public static final Block grilled_tofu = new BlockBuilder(TofuCraft.MOD_ID)
+		.setResistance(0.5f)
+		.setTextures("blocktofugrilled.png")
+		.setHardness(0.45f)
+		.setTags(BlockTags.MINEABLE_BY_SHOVEL, ModBlockTags.TOFU)
+		.setBlockSound(BlockSounds.CLOTH)
+		.setTickOnLoad()
+		.build(new BlockGrilledTofu("grilled_tofu", findOpenIds(IDUtils.getCurrBlockId()), Material.cake));
 
 
 	//fluid
@@ -83,6 +93,33 @@ public class ModBlocks {
 		.setTags(BlockTags.BROKEN_BY_FLUIDS, BlockTags.NOT_IN_CREATIVE_MENU)
 		.setTickOnLoad()
 		.build(new BlockWildSoybeans("wild_soybean", findOpenIds(IDUtils.getCurrBlockId())).withDisabledStats());
+	public static final Block tofu_portal = new BlockBuilder(TofuCraft.MOD_ID)
+		.setTextures("tofu_portal.png")
+		.setBlockSound(BlockSounds.GLASS)
+		.setHardness(-1)
+		.setTags(BlockTags.NOT_IN_CREATIVE_MENU)
+		.build(new BlockPortal("tofu_portal", findOpenIds(IDUtils.getCurrBlockId()), TofuCraft.tofuWorldID, ModBlocks.grilled_tofu.id, ModBlocks.soymilk.id));
+	public static final Block tofu_terrain = new BlockBuilder(TofuCraft.MOD_ID)
+		.setResistance(0.5f)
+		.setTextures("tofu_terrain.png")
+		.setHardness(0.5f)
+		.setTags(BlockTags.MINEABLE_BY_SHOVEL, BlockTags.CAVES_CUT_THROUGH)
+		.setBlockSound(BlockSounds.CLOTH)
+		.build(new Block("tofu_terrain", findOpenIds(IDUtils.getCurrBlockId()), Material.cake));
+	public static final Block tofu_bedrock = new BlockBuilder(TofuCraft.MOD_ID)
+		.setResistance(6000000.0f)
+		.setTextures("tofu_bedrock.png")
+		.setHardness(-1)
+		.setBlockSound(BlockSounds.STONE)
+		.build(new BlockBedrock("tofu_bedrock", findOpenIds(IDUtils.getCurrBlockId()), Material.stone));
+	public static final Block tofu_diamond_ore = new BlockBuilder(TofuCraft.MOD_ID)
+		.setResistance(1.5f)
+		.setTextures("ore_tofu_diamond.png")
+		.setHardness(1.0f)
+		.setTags(BlockTags.MINEABLE_BY_SHOVEL, ModBlockTags.TOFU)
+		.setBlockSound(BlockSounds.CLOTH)
+		.setTickOnLoad()
+		.build(new BlockMomenTofu("tofu_diamond_ore", findOpenIds(IDUtils.getCurrBlockId()), Material.cake));
 
 
 	public static void createBlocks() {
@@ -95,8 +132,13 @@ public class ModBlocks {
 		Item.itemsList[ishi_tofu.id] = new ItemBlock(ishi_tofu);
 		Item.itemsList[metal_tofu.id] = new ItemBlock(metal_tofu);
 		Item.itemsList[diamond_tofu.id] = new ItemBlock(diamond_tofu);
+		Item.itemsList[grilled_tofu.id] = new ItemBlock(grilled_tofu);
 		ItemToolPickaxe.miningLevels.put(metal_tofu, 1);
 		ItemToolPickaxe.miningLevels.put(diamond_tofu, 2);
+
+		Item.itemsList[tofu_terrain.id] = new ItemBlock(tofu_terrain);
+		Item.itemsList[tofu_bedrock.id] = new ItemBlock(tofu_bedrock);
+		Item.itemsList[tofu_diamond_ore.id] = new ItemBlock(tofu_diamond_ore);
 	}
 
 }

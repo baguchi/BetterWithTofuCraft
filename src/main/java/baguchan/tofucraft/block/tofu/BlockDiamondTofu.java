@@ -20,7 +20,7 @@ public class BlockDiamondTofu extends Block {
 			case WORLD:
 			case EXPLOSION:
 			case PROPER_TOOL: {
-				return new ItemStack[]{new ItemStack(ModItems.tofudiamond)};
+				return new ItemStack[]{new ItemStack(ModItems.tofudiamond, 4)};
 			}
 			case PICK_BLOCK:
 			case SILK_TOUCH: {

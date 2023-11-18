@@ -25,6 +25,27 @@ public class ModCraftings {
 			"TT",
 			"TT",
 			'T', ModItems.tofumetal});
+		RecipeHelper.Crafting.createRecipe(ModBlocks.diamond_tofu, 1, new Object[]{
+			"TT",
+			"TT",
+			'T', ModItems.tofudiamond});
+		RecipeHelper.Crafting.createRecipe(ModItems.tofudiamond, 1, new Object[]{
+			"TTT",
+			"TTT",
+			"TTT",
+			'T', ModItems.tofuDiamondNugget});
+		RecipeHelper.Crafting.createShapelessRecipe(new ItemStack(ModItems.tofuDiamondNugget, 9), new Object[]{ModItems.tofudiamond});
+
+		RecipeHelper.Crafting.createRecipe(ModBlocks.grilled_tofu, 1, new Object[]{
+			"TT",
+			"TT",
+			'T', ModItems.tofugrilled});
+
+		RecipeHelper.Smelting.createRecipe(ModItems.tofugrilled, ModItems.tofukinu);
+		RecipeHelper.Smelting.createRecipe(ModItems.tofugrilled, ModItems.tofumomen);
+		RecipeHelper.Smelting.createRecipe(ModBlocks.grilled_tofu, ModBlocks.kinu_tofu);
+		RecipeHelper.Smelting.createRecipe(ModBlocks.grilled_tofu, ModBlocks.momen_tofu);
+
 
 		//Armor
 		RecipeHelper.Crafting.createRecipe(ModItems.armorHelmetKinu, 1, new Object[]{

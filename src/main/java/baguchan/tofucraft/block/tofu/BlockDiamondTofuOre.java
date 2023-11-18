@@ -8,9 +8,9 @@ import net.minecraft.core.enums.EnumDropCause;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.world.World;
 
-public class BlockMetalTofu extends Block {
+public class BlockDiamondTofuOre extends Block {
 
-	public BlockMetalTofu(String key, int id, Material material) {
+	public BlockDiamondTofuOre(String key, int id, Material material) {
 		super(key, id, material);
 	}
 
@@ -20,7 +20,7 @@ public class BlockMetalTofu extends Block {
 			case WORLD:
 			case EXPLOSION:
 			case PROPER_TOOL: {
-				return new ItemStack[]{new ItemStack(ModItems.tofumetal, 4)};
+				return new ItemStack[]{new ItemStack(ModItems.tofuDiamondNugget, 1 + world.rand.nextInt(3))};
 			}
 			case PICK_BLOCK:
 			case SILK_TOUCH: {

@@ -17,6 +17,9 @@ public class ModItems {
 	public static final Item tofuishi = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemFoodStackable("Tofu Ishi", findOpenIds(IDUtils.getCurrItemId()), 2, false, 32), "tofuishi", "tofuishi.png");
 	public static final Item tofumetal = ItemHelper.createItem(TofuCraft.MOD_ID, new Item("Tofu Metal", findOpenIds(IDUtils.getCurrItemId())), "tofumetal", "tofumetal.png");
 	public static final Item tofudiamond = ItemHelper.createItem(TofuCraft.MOD_ID, new Item("Tofu Diamond", findOpenIds(IDUtils.getCurrItemId())), "tofudiamond", "tofudiamond.png");
+	public static final Item tofuDiamondNugget = ItemHelper.createItem(TofuCraft.MOD_ID, new Item("Tofu Diamond Nugget", findOpenIds(IDUtils.getCurrItemId())), "tofu_diamond_nugget", "tofu_diamond_nugget.png");
+	public static final Item tofugrilled = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemFoodStackable("Tofu Grilled", findOpenIds(IDUtils.getCurrItemId()), 2, false, 32), "tofugrilled", "tofugrilled.png");
+
 	//misc
 	public static final Item soymilk_bucket = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemBucket("Soymilk Bucket", findOpenIds(IDUtils.getCurrItemId()), ModBlocks.soymilk), "bucket_soymilk", "bucket_soymilk.png").setContainerItem(Item.bucket);
 	public static final Item soybeans_seeds = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemSeeds("Soybeans Seeds", findOpenIds(IDUtils.getCurrItemId()), ModBlocks.soybean), "seeds_soybeans", "seeds_soybeans.png");

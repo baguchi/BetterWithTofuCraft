@@ -1,14 +1,21 @@
-tile.tofucraft.kinu_tofu.name=Kinu Tofu
-tile.tofucraft.momen_tofu.name=Momen Tofu
-tile.tofucraft.ishi_tofu.name=Ishi Tofu
-tile.tofucraft.metal_tofu.name=Metal Tofu
-tile.tofucraft.diamond_tofu.name=Diamond Tofu
+tile.tofucraft.kinu_tofu.name=Kinu Tofu Block
+tile.tofucraft.momen_tofu.name=Momen Tofu Block
+tile.tofucraft.ishi_tofu.name=Ishi Tofu Block
+tile.tofucraft.metal_tofu.name=Metal Tofu Block
+tile.tofucraft.diamond_tofu.name=Diamond Tofu Block
+tile.tofucraft.grilled_tofu.name=Grilled Tofu Block
 
 tile.tofucraft.soymilk.name=Soymilk
 tile.tofucraft.soymilk_flow.name=Flow Soymilk
 
-tile.tofucraft.soybean.name=Soybean
-tile.tofucraft.wild_soybean.name=Wild Soybean
+tile.tofucraft.soybean.name=Soybean Block
+tile.tofucraft.wild_soybean.name=Wild Soybean Block
+
+tile.tofucraft.tofu_portal.name=Tofu Portal
+tile.tofucraft.tofu_terrain.name=Tofu Terrain
+tile.tofucraft.tofu_bedrock.name=Tofu Bedrock
+tile.tofucraft.tofu_ore_diamond.name=Tofu Diamond Ore
+
 
 item.tofucraft.tofukinu.name=Kinu Tofu
 item.tofucraft.tofumomen.name=Momen Tofu
@@ -16,6 +23,7 @@ item.tofucraft.tofuishi.name=Ishi Tofu
 item.tofucraft.tofumetal.name=Metal Tofu
 item.tofucraft.tofudiamond.name=Diamond Tofu
 item.tofucraft.tofu_diamond_nugget.name=Diamond Tofu Nugget
+item.tofucraft.tofugrilled.name=Grilled Tofu
 
 item.tofucraft.bucket_soymilk.name=Soymilk Bucket
 item.tofucraft.seeds_soybeans.name=Soybeen Seeds
@@ -55,3 +63,7 @@ achievement.tofucraft.make_bittern=Make Bittern
 achievement.tofucraft.make_bittern.desc=Smelt the water bucket and make bittern.
 achievement.tofucraft.harden_to_tofu=Harder!
 achievement.tofucraft.harden_to_tofu.desc=use bittern jar to soymilk.
+
+tofucraft.biome.tofu_plain=Tofu Plain
+tofucraft.worldtype.tofu=Tofu World
+tofucraft.dimension.tofu.name=Tofu World
