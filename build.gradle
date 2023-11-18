@@ -111,7 +111,7 @@ dependencies {
 
 	modImplementation "ModMenu:ModMenu:2.0.0"
 	modImplementation "BTA_Babric_PrismaticLibe:prismaticlibe:${project.prismatic_version}"
-	modImplementation "BetterAI-BTA:better_ai:1.2.0"
+	modImplementation "BetterAI-BTA:better_ai:1.4.0"
 	modImplementation "TerrainAPI:terrainapi:${project.terrain_api_version}"
 
 	implementation "org.slf4j:slf4j-api:1.8.0-beta4"

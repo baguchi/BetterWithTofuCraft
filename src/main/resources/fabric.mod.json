@@ -33,7 +33,8 @@
 		"fabricloader": ">=0.13.3",
 		"halplibe": ">=2.4.0",
 		"prismaticlibe": ">=2.1.1",
-		"terrain-api": ">=1.3.1"
+		"terrain-api": ">=1.3.1",
+		"better_ai": ">=1.4.0"
   },
   "suggests": {
   }
