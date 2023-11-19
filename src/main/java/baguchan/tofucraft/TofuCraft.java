@@ -11,6 +11,7 @@ import baguchan.tofucraft.util.IDUtils;
 import baguchan.tofucraft.world.WorldTypeTofu;
 import baguchan.tofucraft.world.biome.ModBiomes;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint;
 import net.minecraft.core.world.Dimension;
 import net.minecraft.core.world.type.WorldType;
 import net.minecraft.core.world.type.WorldTypes;
@@ -25,10 +26,20 @@ import turniplabs.halplibe.util.achievements.AchievementPage;
 import java.util.Properties;
 
 
-public class TofuCraft implements ModInitializer {
+public class TofuCraft implements ModInitializer, PreLaunchEntrypoint {
+	static {
+		// DO NOT TOUCH THIS! It's an error prevention method. Thanks Useless!
+		try {
+			Class.forName("turniplabs.halplibe.HalpLibe");
+			Class.forName("net.minecraft.core.block.Block");
+			Class.forName("net.minecraft.core.item.Item");
+			Class.forName("net.minecraft.core.world.Dimension");
+		} catch (ClassNotFoundException ignored) {
+		}
+	}
+
 	public static final String MOD_ID = "tofucraft";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-
 	public static AchievementPage tofu_page;
 
 	public static Dimension tofuDimension;
@@ -53,7 +64,6 @@ public class TofuCraft implements ModInitializer {
 
 	@Override
     public void onInitialize() {
-		handleConfig();
 		EntityHelper.createEntity(EntityTofunian.class, new RenderTofunian(new ModelTofunian(), 0.5F), entityID + 1, "Tofunian");
 		SoundHelper.addSound(MOD_ID, "block/soul_breath.wav");
 		SoundHelper.addSound(MOD_ID, "item/soybean/soy_bean_cracking.wav");
@@ -69,6 +79,11 @@ public class TofuCraft implements ModInitializer {
 		SoundHelper.addMusic(MOD_ID, "tofu_world/rough_ground.wav");
 		SoundHelper.addMusic(MOD_ID, "tofu_world/soft.wav");
 		SoundHelper.addMusic(MOD_ID, "tofu_world/tofu_road.wav");
+    }
+
+	@Override
+	public void onPreLaunch() {
+		handleConfig();
 		ModBlocks.createBlocks();
 		ModItems.createItems();
 		ModCraftings.register();
@@ -79,8 +94,7 @@ public class TofuCraft implements ModInitializer {
 		tofuDimension.setDefaultWorldType(tofuWorld);
 		Dimension.registerDimension(tofuWorldID, tofuDimension);
 
-
 		tofu_page = new ModAchievement();
 		AchievementHelper.addPage(tofu_page);
-    }
+	}
 }

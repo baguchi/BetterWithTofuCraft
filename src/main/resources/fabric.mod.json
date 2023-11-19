@@ -23,6 +23,9 @@
 		],
 		"terrain-api": [
 			"baguchan.tofucraft.TerrainAPIPlugin"
+		],
+		"preLaunch": [
+			"baguchan.tofucraft.TofuCraft"
 		]
   },
   "mixins": [

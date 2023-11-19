@@ -24,7 +24,7 @@ public class EntityMixin {
 	@Inject(method = "checkAndHandleWater", at = @At("HEAD"), cancellable = true)
 	public void checkAndHandleWater(CallbackInfoReturnable<Boolean> cir) {
 		Entity entity = (Entity) (Object) this;
-		if (this.world.handleMaterialAcceleration(this.bb.expand(0.0, -0.4f, 0.0).getInsetBoundingBox(0.001, 0.001, 0.001), ModMaterials.soymilk_material, entity)) {
+		if (this.world.handleMaterialAcceleration(this.bb, ModMaterials.soymilk_material, entity)) {
 			cir.setReturnValue(true);
 		}
 	}
