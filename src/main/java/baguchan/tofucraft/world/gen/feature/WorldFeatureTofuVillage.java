@@ -2,7 +2,11 @@ package baguchan.tofucraft.world.gen.feature;
 
 import baguchan.tofucraft.block.ModBlocks;
 import baguchan.tofucraft.entity.EntityTofunian;
+import baguchan.tofucraft.item.ModItems;
 import net.minecraft.core.block.Block;
+import net.minecraft.core.block.entity.TileEntityChest;
+import net.minecraft.core.item.Item;
+import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.world.World;
 import net.minecraft.core.world.biome.Biome;
 import net.minecraft.core.world.generate.feature.WorldFeature;
@@ -113,7 +117,6 @@ public class WorldFeatureTofuVillage extends WorldFeature {
 	}
 
 	private void generateHouse(World world, Random random, int blockX, int blockY, int blockZ, int sizeWidth, int sizeY, int dx, int dz) {
-		int chestZ;
 		boolean door = false;
 		for (int x = blockX - sizeWidth; x <= blockX + sizeWidth; ++x) {
 			for (int y = blockY; y <= blockY + sizeY; ++y) {
@@ -170,16 +173,58 @@ public class WorldFeatureTofuVillage extends WorldFeature {
 		tofunian.moveTo(blockX, blockY + 1, blockZ, 0, 0);
 
 		world.entityJoinedWorld(tofunian);
-
-		/*int chestX = blockX + random.nextInt(sizeX - 1) - (sizeX - 1);
-		if (this.canReplace(world, chestX, blockY - 2, chestZ = blockZ + random.nextInt(sizeX - 1) - (sizeX - 1))) {
-			world.setBlockWithNotify(chestX, blockY - 1, chestZ, Block.chestPlanksOak.id);
-			TileEntityChest tileentitychest = (TileEntityChest)world.getBlockTileEntity(chestX, blockY - 1, chestZ);
+		if (random.nextInt(2) == 0) {
+			world.setBlockWithNotify(blockX - 1, blockY + 1, blockZ + 1, Block.chestPlanksOak.id);
+			TileEntityChest tileentitychest = (TileEntityChest) world.getBlockTileEntity(blockX - 1, blockY + 1, blockZ + 1);
 			for (int k4 = 0; k4 < 10; ++k4) {
 				ItemStack itemstack = this.pickCheckLootItem(random);
 				if (itemstack == null) continue;
 				tileentitychest.setInventorySlotContents(random.nextInt(tileentitychest.getSizeInventory()), itemstack);
 			}
-		}*/
+		}
+	}
+
+	private ItemStack pickCheckLootItem(Random random) {
+		int i = random.nextInt(14);
+		if (i == 1) {
+			return new ItemStack(Item.ingotIron, random.nextInt(6) + 1);
+		}
+		if (i == 2) {
+			return new ItemStack(Item.jar, random.nextInt(3) + 1);
+		}
+		if (i == 3) {
+			return new ItemStack(Item.bucket, 1);
+		}
+		if (i == 4 && random.nextInt(50) == 0) {
+			return new ItemStack(ModItems.tofuDiamondNugget, random.nextInt(4) + 4);
+		}
+		if (i == 5 && random.nextInt(100) == 0) {
+			return new ItemStack(ModItems.tofudiamond, random.nextInt(1) + 1);
+		}
+		if (i == 6 && random.nextInt(10) == 0) {
+			return new ItemStack(ModItems.tofu_stick, 1);
+		}
+		if (i == 7 && random.nextInt(10) == 0) {
+			return new ItemStack(ModItems.tofugrilled, random.nextInt(12) + 1);
+		}
+		if (i == 8 && random.nextInt(5) == 0) {
+			return new ItemStack(ModItems.shovelTofuMetal);
+		}
+		if (i == 9 && random.nextInt(5) == 0) {
+			return new ItemStack(ModItems.armorHelmetMetal);
+		}
+		if (i == 10 && random.nextInt(5) == 0) {
+			return new ItemStack(ModItems.armorChestplateMetal);
+		}
+		if (i == 11 && random.nextInt(5) == 0) {
+			return new ItemStack(ModItems.armorLeggingsMetal);
+		}
+		if (i == 12 && random.nextInt(5) == 0) {
+			return new ItemStack(ModItems.armorBootsMetal);
+		}
+		if (i == 13) {
+			return new ItemStack(ModItems.soybeans_seeds, random.nextInt(8) + 1);
+		}
+		return null;
 	}
 }

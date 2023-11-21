@@ -331,5 +331,13 @@ public class ModCraftings {
 
 		RecipeHelper.Crafting.createShapelessRecipe(new ItemStack(ModItems.soystick, 1), new Object[]{ModItems.soybeans_seeds, ModItems.salt, Item.wheat});
 
+		RecipeHelper.Crafting.createRecipe(ModBlocks.tofuishi_brick, 4, new Object[]{
+			"TT",
+			"TT",
+			'T', ModBlocks.ishi_tofu});
+		RecipeHelper.Crafting.createRecipe(ModBlocks.tofuishi_smooth_brick, 4, new Object[]{
+			"TT",
+			"TT",
+			'T', ModBlocks.tofuishi_brick});
 	}
 }
