@@ -7,6 +7,7 @@ import net.minecraft.core.block.Block;
 import net.minecraft.core.block.entity.TileEntityChest;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
+import net.minecraft.core.util.phys.Vec3d;
 import net.minecraft.core.world.World;
 import net.minecraft.core.world.biome.Biome;
 import net.minecraft.core.world.generate.feature.WorldFeature;
@@ -88,7 +89,8 @@ public class WorldFeatureTofuVillage extends WorldFeature {
 				this.generateBranch(world, random, blockX, blockY, blockZ);
 			}
 		} else if (random.nextInt(2) == 0 && corridorIteration > 1 && this.villageSize > 3 || this.villageSize >= 10 && this.houseCount < this.houseLimit) {
-			this.createHouse(world, random, blockX, blockY, blockZ, rot);
+			int y = world.getHeightValue(blockX, blockZ) - 1;
+			this.createHouse(world, random, blockX, y, blockZ, rot);
 			++this.houseCount;
 		} else {
 			if (random.nextInt(10) == 0 && corridorIteration > 1 && this.villageSize > 5) {
@@ -170,16 +172,19 @@ public class WorldFeatureTofuVillage extends WorldFeature {
 
 
 		EntityTofunian tofunian = new EntityTofunian(world);
+		tofunian.setHomePos(Vec3d.createVector(blockX, blockY + 1, blockZ));
 		tofunian.moveTo(blockX, blockY + 1, blockZ, 0, 0);
 
 		world.entityJoinedWorld(tofunian);
 		if (random.nextInt(2) == 0) {
-			world.setBlockWithNotify(blockX - 1, blockY + 1, blockZ + 1, Block.chestPlanksOak.id);
-			TileEntityChest tileentitychest = (TileEntityChest) world.getBlockTileEntity(blockX - 1, blockY + 1, blockZ + 1);
+			world.setBlockWithNotify(blockX + sizeWidth - 1, blockY + 1, blockZ - sizeWidth + 1, Block.chestPlanksOak.id);
+			TileEntityChest tileentitychest = (TileEntityChest) world.getBlockTileEntity(blockX + sizeWidth - 1, blockY + 1, blockZ - sizeWidth + 1);
 			for (int k4 = 0; k4 < 10; ++k4) {
 				ItemStack itemstack = this.pickCheckLootItem(random);
 				if (itemstack == null) continue;
-				tileentitychest.setInventorySlotContents(random.nextInt(tileentitychest.getSizeInventory()), itemstack);
+				if (tileentitychest != null) {
+					tileentitychest.setInventorySlotContents(random.nextInt(tileentitychest.getSizeInventory()), itemstack);
+				}
 			}
 		}
 	}
