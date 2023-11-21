@@ -4,10 +4,10 @@
   "package": "baguchan.tofucraft.mixin",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
-      "EntityMixin"
     ],
     "client": [
-      "client.RenderBlockMixin"
+      "client.RenderBlockMixin",
+      "client.SoundManagerMixin"
     ],
     "injectors": {
         "defaultRequire": 1

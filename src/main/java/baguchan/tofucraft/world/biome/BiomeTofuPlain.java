@@ -11,5 +11,8 @@ public class BiomeTofuPlain extends Biome {
 		setColor(0xFFFFFF);
 		setTopBlock(ModBlocks.tofu_terrain.id);
 		setFillerBlock(ModBlocks.tofu_terrain.id);
+		this.spawnableMonsterList.clear();
+		this.spawnableCreatureList.clear();
+		this.spawnableWaterCreatureList.clear();
 	}
 }

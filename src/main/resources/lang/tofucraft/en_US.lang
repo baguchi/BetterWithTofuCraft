@@ -16,6 +16,11 @@ tile.tofucraft.tofu_terrain.name=Tofu Terrain
 tile.tofucraft.tofu_bedrock.name=Tofu Bedrock
 tile.tofucraft.tofu_ore_diamond.name=Tofu Diamond Ore
 
+tile.tofucraft.saltpan.name=Saltpan
+tile.tofucraft.saltpan_water.name=Saltpan
+tile.tofucraft.saltpan_bittern.name=Saltpan
+tile.tofucraft.saltpan_salt.name=Saltpan
+
 
 item.tofucraft.tofukinu.name=Kinu Tofu
 item.tofucraft.tofumomen.name=Momen Tofu
@@ -89,6 +94,7 @@ item.tofucraft.tofu_diamond_shovel.name=Tofu Diamond Shovel
 item.tofucraft.tofu_diamond_hoe.name=Tofu Diamond Hoe
 
 item.tofucraft.tofu_stick.name=Tofu Stick
+item.tofucraft.salt.name=Salt
 
 achievements.page.tofucraft.desc=TofuCraft
 achievement.tofucraft.make_bittern=Make Bittern
@@ -98,4 +104,4 @@ achievement.tofucraft.harden_to_tofu.desc=use bittern jar to soymilk.
 
 tofucraft.biome.tofu_plain=Tofu Plain
 tofucraft.worldtype.tofu=Tofu World
-tofucraft.dimension.tofu.name=Tofu World
+dimension.tofucraft.dimension.tofu.name=Tofu World

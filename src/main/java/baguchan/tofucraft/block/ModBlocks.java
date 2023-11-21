@@ -13,6 +13,8 @@ import net.minecraft.core.item.Item;
 import net.minecraft.core.item.block.ItemBlock;
 import net.minecraft.core.item.tool.ItemToolPickaxe;
 import turniplabs.halplibe.helper.BlockBuilder;
+import useless.dragonfly.helper.ModelHelper;
+import useless.dragonfly.model.block.BlockModelDragonFly;
 
 import static turniplabs.halplibe.helper.BlockHelper.findOpenIds;
 
@@ -71,13 +73,13 @@ public class ModBlocks {
 		.setHardness(100.0f)
 		.setTags(BlockTags.IS_WATER, BlockTags.PLACE_OVERWRITES, BlockTags.NOT_IN_CREATIVE_MENU)
 		.setVisualUpdateOnMetadata()
-		.build(new BlockFluidSoyFlowing("soymilk_flow", findOpenIds(IDUtils.getCurrBlockId()), ModMaterials.soymilk_material).withLightOpacity(3).withDisabledStats());
+		.build(new BlockFluidSoyFlowing("soymilk_flow", findOpenIds(IDUtils.getCurrBlockId()), Material.water).withLightOpacity(3).withDisabledStats());
 	public static final Block soymilk = new BlockBuilder(TofuCraft.MOD_ID)
 		.setTextures("soymilk.png")
 		.setHardness(100.0f)
 		.setVisualUpdateOnMetadata()
 		.setTags(BlockTags.IS_WATER, BlockTags.PLACE_OVERWRITES, BlockTags.NOT_IN_CREATIVE_MENU)
-		.build(new BlockFluidSoyStill("soymilk", findOpenIds(IDUtils.getCurrBlockId()), ModMaterials.soymilk_material).withLightOpacity(3).withDisabledStats());
+		.build(new BlockFluidSoyStill("soymilk", findOpenIds(IDUtils.getCurrBlockId()), Material.water).withLightOpacity(3).withDisabledStats());
 	public static final Block soybean = new BlockBuilder(TofuCraft.MOD_ID)
 		.setHardness(0.0f)
 		.setVisualUpdateOnMetadata()
@@ -121,6 +123,30 @@ public class ModBlocks {
 		.setTickOnLoad()
 		.build(new BlockMomenTofu("tofu_diamond_ore", findOpenIds(IDUtils.getCurrBlockId()), Material.cake));
 
+	public static final Block saltpan = new BlockBuilder(TofuCraft.MOD_ID)
+		.setResistance(1.5F)
+		.setHardness(0.6F)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(TofuCraft.MOD_ID, "block/saltpan.json")))
+		.build(new BlockSaltpan("saltpan", findOpenIds(IDUtils.getCurrBlockId()), Material.wood));
+	public static final Block saltpan_water = new BlockBuilder(TofuCraft.MOD_ID)
+		.setResistance(1.5F)
+		.setHardness(0.6F)
+		.setTickOnLoad()
+		.setTags(BlockTags.NOT_IN_CREATIVE_MENU)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(TofuCraft.MOD_ID, "block/saltpan_water.json")))
+		.build(new BlockSaltpan("saltpan_water", findOpenIds(IDUtils.getCurrBlockId()), Material.wood));
+	public static final Block saltpan_bittern = new BlockBuilder(TofuCraft.MOD_ID)
+		.setResistance(1.5F)
+		.setHardness(0.6F)
+		.setTags(BlockTags.NOT_IN_CREATIVE_MENU)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(TofuCraft.MOD_ID, "block/saltpan_bittern.json")))
+		.build(new BlockSaltpan("saltpan_bittern", findOpenIds(IDUtils.getCurrBlockId()), Material.wood));
+	public static final Block saltpan_salt = new BlockBuilder(TofuCraft.MOD_ID)
+		.setResistance(1.5F)
+		.setHardness(0.6F)
+		.setTags(BlockTags.NOT_IN_CREATIVE_MENU)
+		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(TofuCraft.MOD_ID, "block/saltpan_salt.json")))
+		.build(new BlockSaltpan("saltpan_salt", findOpenIds(IDUtils.getCurrBlockId()), Material.wood));
 
 	public static void createBlocks() {
 
@@ -139,6 +165,7 @@ public class ModBlocks {
 		Item.itemsList[tofu_terrain.id] = new ItemBlock(tofu_terrain);
 		Item.itemsList[tofu_bedrock.id] = new ItemBlock(tofu_bedrock);
 		Item.itemsList[tofu_diamond_ore.id] = new ItemBlock(tofu_diamond_ore);
+		Item.itemsList[saltpan.id] = new ItemBlock(saltpan);
 	}
 
 }

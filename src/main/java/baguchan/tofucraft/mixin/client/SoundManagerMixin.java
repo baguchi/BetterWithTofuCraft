@@ -1,4 +1,4 @@
-package baguchan.tofucraft.mixin;
+package baguchan.tofucraft.mixin.client;
 
 import baguchan.tofucraft.ModSoundPools;
 import baguchan.tofucraft.TofuCraft;
@@ -20,12 +20,11 @@ public class SoundManagerMixin {
 	@Shadow
 	@Final
 	private Random rand = new Random();
-	@Shadow
-	private Minecraft mc;
 
-	@Redirect(method = "playRandomMusicIfReady", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/sound/SoundPool;getRandomSound()Lnet/minecraft/client/sound/SoundPoolEntry;"))
+	@Redirect(method = "playRandomMusicIfReady", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/sound/SoundPool;getRandomSound()Lnet/minecraft/client/sound/SoundPoolEntry;", ordinal = 1))
 	public SoundPoolEntry playRandomMusicIfReady(SoundPool instance) {
-		SoundPoolEntry soundpoolentry = this.mc != null && this.mc.thePlayer != null && this.mc.thePlayer.world.dimension == TofuCraft.tofuDimension ? ModSoundPools.MOD_SOUND_POOLS_TOFU_MUSIC.getRandomSound() : instance.getRandomSound();
+		Minecraft mc = Minecraft.getMinecraft(this);
+		SoundPoolEntry soundpoolentry = mc.theWorld.dimension == TofuCraft.tofuDimension ? ModSoundPools.MOD_SOUND_POOLS_TOFU_MUSIC.getRandomSound() : instance.getRandomSound();
 		return soundpoolentry;
 	}
 

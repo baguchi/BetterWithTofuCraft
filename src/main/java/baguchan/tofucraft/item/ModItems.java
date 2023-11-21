@@ -103,6 +103,8 @@ public class ModItems {
 	public static final Item axeTofuDiamond = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolAxe("Tofu Diamond Axe", findOpenIds(IDUtils.getCurrItemId()), tool_diamond), "tofu_diamond_axe", "tofu_diamond_axe.png");
 	public static final Item shovelTofuDiamond = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolShovel("Tofu Diamond Shovel", findOpenIds(IDUtils.getCurrItemId()), tool_diamond), "tofu_diamond_shovel", "tofu_diamond_shovel.png");
 	public static final Item hoeTofuDiamond = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolHoe("Tofu Diamond Hoe", findOpenIds(IDUtils.getCurrItemId()), tool_metal), "tofu_diamond_hoe", "tofu_diamond_hoe.png");
+	//misc 2
+	public static final Item salt = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemBitternJar("salt", findOpenIds(IDUtils.getCurrItemId())), "salt", "salt.png");
 
 
 	public static void createItems() {
