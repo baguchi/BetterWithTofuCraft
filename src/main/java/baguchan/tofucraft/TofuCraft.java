@@ -79,7 +79,7 @@ public class TofuCraft implements ModInitializer, PreLaunchEntrypoint {
 		SoundHelper.addMusic(MOD_ID, "tofu_world/rough_ground.wav");
 		SoundHelper.addMusic(MOD_ID, "tofu_world/soft.wav");
 		SoundHelper.addMusic(MOD_ID, "tofu_world/tofu_road.wav");
-    }
+	}
 
 	@Override
 	public void onPreLaunch() {

@@ -1,4 +1,4 @@
-package baguchan.tofucraft.world;
+package baguchan.tofucraft.world.gen;
 
 import baguchan.tofucraft.block.ModBlocks;
 import net.minecraft.core.world.World;

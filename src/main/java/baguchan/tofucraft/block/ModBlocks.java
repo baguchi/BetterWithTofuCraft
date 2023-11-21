@@ -121,32 +121,56 @@ public class ModBlocks {
 		.setTags(BlockTags.MINEABLE_BY_SHOVEL, ModBlockTags.TOFU)
 		.setBlockSound(BlockSounds.CLOTH)
 		.setTickOnLoad()
-		.build(new BlockMomenTofu("tofu_diamond_ore", findOpenIds(IDUtils.getCurrBlockId()), Material.cake));
+		.build(new BlockDiamondTofuOre("tofu_diamond_ore", findOpenIds(IDUtils.getCurrBlockId()), Material.cake));
 
 	public static final Block saltpan = new BlockBuilder(TofuCraft.MOD_ID)
 		.setResistance(1.5F)
 		.setHardness(0.6F)
+		.setTags(BlockTags.MINEABLE_BY_AXE)
 		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(TofuCraft.MOD_ID, "block/saltpan.json")))
 		.build(new BlockSaltpan("saltpan", findOpenIds(IDUtils.getCurrBlockId()), Material.wood));
 	public static final Block saltpan_water = new BlockBuilder(TofuCraft.MOD_ID)
 		.setResistance(1.5F)
 		.setHardness(0.6F)
 		.setTickOnLoad()
-		.setTags(BlockTags.NOT_IN_CREATIVE_MENU)
+		.setTags(BlockTags.NOT_IN_CREATIVE_MENU, BlockTags.MINEABLE_BY_AXE)
 		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(TofuCraft.MOD_ID, "block/saltpan_water.json")))
 		.build(new BlockSaltpan("saltpan_water", findOpenIds(IDUtils.getCurrBlockId()), Material.wood));
 	public static final Block saltpan_bittern = new BlockBuilder(TofuCraft.MOD_ID)
 		.setResistance(1.5F)
 		.setHardness(0.6F)
-		.setTags(BlockTags.NOT_IN_CREATIVE_MENU)
+		.setTags(BlockTags.NOT_IN_CREATIVE_MENU, BlockTags.MINEABLE_BY_AXE)
 		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(TofuCraft.MOD_ID, "block/saltpan_bittern.json")))
 		.build(new BlockSaltpan("saltpan_bittern", findOpenIds(IDUtils.getCurrBlockId()), Material.wood));
 	public static final Block saltpan_salt = new BlockBuilder(TofuCraft.MOD_ID)
 		.setResistance(1.5F)
 		.setHardness(0.6F)
-		.setTags(BlockTags.NOT_IN_CREATIVE_MENU)
+		.setTags(BlockTags.NOT_IN_CREATIVE_MENU, BlockTags.MINEABLE_BY_AXE)
 		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(TofuCraft.MOD_ID, "block/saltpan_salt.json")))
 		.build(new BlockSaltpan("saltpan_salt", findOpenIds(IDUtils.getCurrBlockId()), Material.wood));
+	public static final Block tofuishi_brick = new BlockBuilder(TofuCraft.MOD_ID)
+		.setResistance(5.0f)
+		.setTextures("tofuishi_brick.png")
+		.setHardness(1.25f)
+		.setTags(BlockTags.MINEABLE_BY_PICKAXE)
+		.setBlockSound(BlockSounds.STONE)
+		.build(new Block("tofu_ishi_brick", findOpenIds(IDUtils.getCurrBlockId()), Material.stone));
+	public static final Block tofuishi_chiseled_brick = new BlockBuilder(TofuCraft.MOD_ID)
+		.setResistance(5.0f)
+		.setTextures("tofuishi_chiseled_brick.png")
+		.setHardness(1.25f)
+		.setTags(BlockTags.MINEABLE_BY_PICKAXE)
+		.setBlockSound(BlockSounds.STONE)
+		.build(new Block("tofu_ishi_chiseled_brick", findOpenIds(IDUtils.getCurrBlockId()), Material.stone));
+	public static final Block tofuishi_smooth_brick = new BlockBuilder(TofuCraft.MOD_ID)
+		.setResistance(5.0f)
+		.setTextures("tofuishi_smooth_brick.png")
+		.setHardness(1.25f)
+		.setTags(BlockTags.MINEABLE_BY_PICKAXE)
+		.setBlockSound(BlockSounds.STONE)
+		.build(new Block("tofu_ishi_smooth_brick", findOpenIds(IDUtils.getCurrBlockId()), Material.stone));
+
+
 
 	public static void createBlocks() {
 
@@ -166,6 +190,10 @@ public class ModBlocks {
 		Item.itemsList[tofu_bedrock.id] = new ItemBlock(tofu_bedrock);
 		Item.itemsList[tofu_diamond_ore.id] = new ItemBlock(tofu_diamond_ore);
 		Item.itemsList[saltpan.id] = new ItemBlock(saltpan);
+
+		Item.itemsList[tofuishi_brick.id] = new ItemBlock(tofuishi_brick);
+		Item.itemsList[tofuishi_chiseled_brick.id] = new ItemBlock(tofuishi_chiseled_brick);
+		Item.itemsList[tofuishi_smooth_brick.id] = new ItemBlock(tofuishi_smooth_brick);
 	}
 
 }

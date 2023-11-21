@@ -43,7 +43,7 @@ public class BlockTofu extends Block {
 		Block baseBlock = world.getBlock(x, y - 1, z);
 
 		boolean isWeightValid = weightBlock != null
-			&& baseBlock.getIsBlockSolid(world, x, y + 1, z, Side.BOTTOM) && (weightBlock.blockMaterial == Material.stone || weightBlock.blockMaterial == Material.ice) && weightBlock != ModBlocks.ishi_tofu;
+			&& weightBlock.getIsBlockSolid(world, x, y + 1, z, Side.BOTTOM) && (weightBlock.blockMaterial == Material.stone || weightBlock.blockMaterial == Material.ice) && weightBlock != ModBlocks.ishi_tofu;
 
 		boolean isBaseValid = baseBlock != null && baseBlock.getIsBlockSolid(world, x, y - 1, z, Side.TOP) &&
 			(baseBlock.blockMaterial == Material.stone || baseBlock.blockMaterial == Material.metal || baseBlock.getHardness() >= 1.0F || baseBlock.getHardness() < 0.0F);

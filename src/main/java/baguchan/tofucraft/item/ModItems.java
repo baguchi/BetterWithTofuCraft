@@ -105,6 +105,7 @@ public class ModItems {
 	public static final Item hoeTofuDiamond = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemToolHoe("Tofu Diamond Hoe", findOpenIds(IDUtils.getCurrItemId()), tool_metal), "tofu_diamond_hoe", "tofu_diamond_hoe.png");
 	//misc 2
 	public static final Item salt = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemBitternJar("salt", findOpenIds(IDUtils.getCurrItemId())), "salt", "salt.png");
+	public static final Item soystick = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemFoodStackable("soystick", findOpenIds(IDUtils.getCurrItemId()), 3, false, 4), "soystick", "soystick.png");
 
 
 	public static void createItems() {

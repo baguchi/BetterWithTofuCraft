@@ -85,9 +85,6 @@ public class BlockSaltpan extends useless.dragonfly.debug.block.BlockModel {
 
 	@Override
 	public ItemStack[] getBreakResult(World world, EnumDropCause dropCause, int x, int y, int z, int meta, TileEntity tileEntity) {
-		if (dropCause != EnumDropCause.IMPROPER_TOOL) {
-			return new ItemStack[]{new ItemStack(ModBlocks.saltpan)};
-		}
-		return null;
+		return new ItemStack[]{new ItemStack(ModBlocks.saltpan)};
 	}
 }

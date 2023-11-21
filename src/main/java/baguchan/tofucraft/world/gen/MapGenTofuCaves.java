@@ -1,4 +1,4 @@
-package baguchan.tofucraft.world;
+package baguchan.tofucraft.world.gen;
 
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.tag.BlockTags;

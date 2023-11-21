@@ -14,12 +14,16 @@ tile.tofucraft.wild_soybean.name=Wild Soybean Block
 tile.tofucraft.tofu_portal.name=Tofu Portal
 tile.tofucraft.tofu_terrain.name=Tofu Terrain
 tile.tofucraft.tofu_bedrock.name=Tofu Bedrock
-tile.tofucraft.tofu_ore_diamond.name=Tofu Diamond Ore
+tile.tofucraft.tofu_diamond_ore.name=Tofu Diamond Ore
 
 tile.tofucraft.saltpan.name=Saltpan
 tile.tofucraft.saltpan_water.name=Saltpan
 tile.tofucraft.saltpan_bittern.name=Saltpan
 tile.tofucraft.saltpan_salt.name=Saltpan
+
+tile.tofucraft.tofu_ishi_brick.name=Tofu Ishi Brick
+tile.tofucraft.tofu_ishi_chiseled_brick.name=Chiseled Ishi Tofu Brick
+tile.tofucraft.tofu_ishi_smooth_brick.name=Smooth Ishi Tofu Brick
 
 
 item.tofucraft.tofukinu.name=Kinu Tofu
@@ -95,6 +99,7 @@ item.tofucraft.tofu_diamond_hoe.name=Tofu Diamond Hoe
 
 item.tofucraft.tofu_stick.name=Tofu Stick
 item.tofucraft.salt.name=Salt
+item.tofucraft.soystick.name=SoyStick
 
 achievements.page.tofucraft.desc=TofuCraft
 achievement.tofucraft.make_bittern=Make Bittern

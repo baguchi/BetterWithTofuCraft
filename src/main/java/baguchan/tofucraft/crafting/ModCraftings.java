@@ -2,6 +2,7 @@ package baguchan.tofucraft.crafting;
 
 import baguchan.tofucraft.block.ModBlocks;
 import baguchan.tofucraft.item.ModItems;
+import net.minecraft.core.block.Block;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
 import turniplabs.halplibe.helper.RecipeHelper;
@@ -307,5 +308,28 @@ public class ModCraftings {
 		RecipeHelper.Smelting.createRecipe(ModItems.boiled_edamame, ModItems.edamame);
 
 		RecipeHelper.Crafting.createShapelessRecipe(new ItemStack(ModItems.bittern_jar, 3), new Object[]{Item.jar, Item.jar, Item.jar, ModItems.bittern_bucket});
+		RecipeHelper.Crafting.createRecipe(ModBlocks.saltpan, 1, new Object[]{
+			"S S",
+			" T ",
+			'T', Block.slabCobbleBasalt,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModBlocks.saltpan, 1, new Object[]{
+			"S S",
+			" T ",
+			'T', Block.slabCobbleGranite,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModBlocks.saltpan, 1, new Object[]{
+			"S S",
+			" T ",
+			'T', Block.slabCobbleStone,
+			'S', Item.stick});
+		RecipeHelper.Crafting.createRecipe(ModBlocks.saltpan, 1, new Object[]{
+			"S S",
+			" T ",
+			'T', Block.slabCobbleLimestone,
+			'S', Item.stick});
+
+		RecipeHelper.Crafting.createShapelessRecipe(new ItemStack(ModItems.soystick, 1), new Object[]{ModItems.soybeans_seeds, ModItems.salt, Item.wheat});
+
 	}
 }

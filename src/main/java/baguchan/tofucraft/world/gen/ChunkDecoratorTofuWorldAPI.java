@@ -1,4 +1,4 @@
-package baguchan.tofucraft.world;
+package baguchan.tofucraft.world.gen;
 
 import net.minecraft.core.world.World;
 import net.minecraft.core.world.biome.Biome;
@@ -11,7 +11,6 @@ import useless.terrainapi.generation.ChunkDecoratorAPI;
 import useless.terrainapi.generation.Parameters;
 import useless.terrainapi.generation.StructureFeatures;
 import useless.terrainapi.generation.overworld.OverworldBiomeFeatures;
-import useless.terrainapi.generation.overworld.OverworldOreFeatures;
 import useless.terrainapi.generation.overworld.OverworldRandomFeatures;
 
 import java.util.Random;
@@ -21,7 +20,7 @@ public class ChunkDecoratorTofuWorldAPI extends ChunkDecoratorAPI {
 	public final PerlinNoise treeDensityNoise;
 	public final int treeDensityOverride;
 	public static StructureFeatures structureFeatures = new StructureFeatures();
-	public static OverworldOreFeatures oreFeatures = new OverworldOreFeatures(tofuWorldConfig);
+	public static TofuWorldOreFeatures oreFeatures = new TofuWorldOreFeatures(tofuWorldConfig);
 	public static OverworldRandomFeatures randomFeatures = new OverworldRandomFeatures();
 	public static OverworldBiomeFeatures biomeFeatures = new OverworldBiomeFeatures();
 

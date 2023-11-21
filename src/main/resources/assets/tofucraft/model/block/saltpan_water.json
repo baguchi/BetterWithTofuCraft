@@ -2,7 +2,7 @@
   "parent": "block/block",
   "render_type": "cutout",
   "textures": {
-    "content": "minecraft:block/water0",
+    "content": "tofucraft:block/water",
     "edgetexture": "minecraft:block/planks_oak",
     "dishtexture": "minecraft:block/cobbled_stone",
     "particle": "minecraft:block/cobbled_stone"
