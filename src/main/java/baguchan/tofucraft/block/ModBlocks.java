@@ -3,6 +3,7 @@ package baguchan.tofucraft.block;
 import baguchan.tofucraft.TofuCraft;
 import baguchan.tofucraft.block.tofu.*;
 import baguchan.tofucraft.util.IDUtils;
+import net.minecraft.client.render.block.color.BlockColorWater;
 import net.minecraft.client.sound.block.BlockSounds;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockBedrock;
@@ -133,6 +134,7 @@ public class ModBlocks {
 		.setResistance(1.5F)
 		.setHardness(0.6F)
 		.setTickOnLoad()
+		.setBlockColor(new BlockColorWater())
 		.setTags(BlockTags.NOT_IN_CREATIVE_MENU, BlockTags.MINEABLE_BY_AXE)
 		.setBlockModel(new BlockModelDragonFly(ModelHelper.getOrCreateBlockModel(TofuCraft.MOD_ID, "block/saltpan_water.json")))
 		.build(new BlockSaltpan("saltpan_water", findOpenIds(IDUtils.getCurrBlockId()), Material.wood));

@@ -304,7 +304,6 @@ public class ModCraftings {
 			'S', Item.stick});
 
 		//misc
-		RecipeHelper.Smelting.createRecipe(ModItems.bittern_bucket, Item.bucketWater);
 		RecipeHelper.Smelting.createRecipe(ModItems.boiled_edamame, ModItems.edamame);
 
 		RecipeHelper.Crafting.createShapelessRecipe(new ItemStack(ModItems.bittern_jar, 3), new Object[]{Item.jar, Item.jar, Item.jar, ModItems.bittern_bucket});

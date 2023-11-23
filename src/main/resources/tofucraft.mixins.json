@@ -4,6 +4,7 @@
   "package": "baguchan.tofucraft.mixin",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
+      "WorldFeatureLabyrinthMixin"
     ],
     "client": [
       "client.RenderBlockMixin",
