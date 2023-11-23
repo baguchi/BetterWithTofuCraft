@@ -6,7 +6,15 @@ This mod is a backport version of tofucraftreload, a mod I'm making.
 
 Soybean. Tofu. Tofu... something?
 
-Tofu World coming soon...
+## Differences from the original
+
+Tofu Village generation
+
+beta like gameplay
+
+Explosive Tofu World sleeping(don't sleep in the tofu world)
+
+##  
 
 ## original:
 

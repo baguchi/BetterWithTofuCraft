@@ -22,6 +22,7 @@ import turniplabs.halplibe.helper.EntityHelper;
 import turniplabs.halplibe.helper.SoundHelper;
 import turniplabs.halplibe.util.ConfigHandler;
 import turniplabs.halplibe.util.achievements.AchievementPage;
+import useless.dragonfly.helper.ModelHelper;
 
 import java.util.Properties;
 
@@ -64,7 +65,7 @@ public class TofuCraft implements ModInitializer, PreLaunchEntrypoint {
 
 	@Override
     public void onInitialize() {
-		EntityHelper.createEntity(EntityTofunian.class, new RenderTofunian(new ModelTofunian(), 0.5F), entityID + 1, "Tofunian");
+		EntityHelper.createEntity(EntityTofunian.class, new RenderTofunian(ModelHelper.getOrCreateEntityModel(MOD_ID, "entity/tofunian.geo.json", ModelTofunian.class), 0.5f), entityID + 1, "Tofunian");
 		SoundHelper.addSound(MOD_ID, "block/soul_breath.wav");
 		SoundHelper.addSound(MOD_ID, "item/soybean/soy_bean_cracking.wav");
 		SoundHelper.addSound(MOD_ID, "item/soybean/soy_bean_cracking2.wav");

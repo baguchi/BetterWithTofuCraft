@@ -1,11 +1,11 @@
 package baguchan.tofucraft.entity;
 
-import net.minecraft.client.render.entity.MobRenderer;
-import net.minecraft.client.render.model.ModelBiped;
+import net.minecraft.client.render.entity.LivingRenderer;
+import net.minecraft.client.render.model.ModelBase;
 
-public class RenderTofunian extends MobRenderer<EntityTofunian> {
+public class RenderTofunian extends LivingRenderer<EntityTofunian> {
 
-	public RenderTofunian(ModelBiped modelbase, float shadowSize) {
+	public RenderTofunian(ModelBase modelbase, float shadowSize) {
 		super(modelbase, shadowSize);
 		//setRenderPassModel(new ModelTofunian());
 	}
