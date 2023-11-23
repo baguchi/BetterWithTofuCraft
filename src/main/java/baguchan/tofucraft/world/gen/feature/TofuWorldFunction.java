@@ -12,7 +12,7 @@ public class TofuWorldFunction {
 			int xPos = x + parameters.random.nextInt(16) + 8;
 			int zPos = z + parameters.random.nextInt(16) + 8;
 			int yPos = parameters.decorator.world.getHeightValue(xPos, zPos);
-			if (parameters.random.nextInt(300) != 0) continue;
+			if (parameters.random.nextInt(350) != 0) continue;
 			Random lRand = parameters.chunk.getChunkRandom(21344760L);
 			new WorldFeatureTofuVillage().generate(parameters.decorator.world, lRand, xPos, yPos, zPos);
 		}

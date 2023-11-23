@@ -179,7 +179,7 @@ public class WorldFeatureTofuVillage extends WorldFeature {
 		if (random.nextInt(2) == 0) {
 			world.setBlockWithNotify(blockX + sizeWidth - 1, blockY + 1, blockZ - sizeWidth + 1, Block.chestPlanksOak.id);
 			TileEntityChest tileentitychest = (TileEntityChest) world.getBlockTileEntity(blockX + sizeWidth - 1, blockY + 1, blockZ - sizeWidth + 1);
-			for (int k4 = 0; k4 < 10; ++k4) {
+			for (int k4 = 0; k4 < 18; ++k4) {
 				ItemStack itemstack = this.pickCheckLootItem(random);
 				if (itemstack == null) continue;
 				if (tileentitychest != null) {
@@ -206,11 +206,11 @@ public class WorldFeatureTofuVillage extends WorldFeature {
 		if (i == 5 && random.nextInt(100) == 0) {
 			return new ItemStack(ModItems.tofudiamond, random.nextInt(1) + 1);
 		}
-		if (i == 6 && random.nextInt(10) == 0) {
+		if (i == 6 && random.nextInt(5) == 0) {
 			return new ItemStack(ModItems.tofu_stick, 1);
 		}
-		if (i == 7 && random.nextInt(10) == 0) {
-			return new ItemStack(ModItems.tofugrilled, random.nextInt(12) + 1);
+		if (i == 7) {
+			return new ItemStack(ModBlocks.grilled_tofu, random.nextInt(10) + 1);
 		}
 		if (i == 8 && random.nextInt(5) == 0) {
 			return new ItemStack(ModItems.shovelTofuMetal);
