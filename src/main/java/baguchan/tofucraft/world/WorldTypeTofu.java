@@ -68,4 +68,14 @@ public class WorldTypeTofu extends WorldTypeOverworld {
 	public boolean hasAurora() {
 		return true;
 	}
+
+	@Override
+	public boolean isValidSpawn(World world, int x, int y, int z) {
+		return true;
+	}
+
+	@Override
+	public boolean mayRespawn() {
+		return false;
+	}
 }
