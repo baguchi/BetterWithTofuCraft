@@ -1,13 +1,18 @@
 package baguchan.tofucraft.entity;
 
 import com.mojang.nbt.CompoundTag;
+import net.minecraft.core.entity.Entity;
 import net.minecraft.core.entity.animal.EntityAnimal;
+import net.minecraft.core.util.helper.DamageType;
 import net.minecraft.core.util.phys.Vec3d;
 import net.minecraft.core.world.World;
+import useless.dragonfly.model.entity.AnimationState;
 
 import javax.annotation.Nullable;
 
 public class EntityTofunian extends EntityAnimal {
+
+	public AnimationState sitAnimation = new AnimationState();
 	@Nullable
 	private Vec3d homePos;
 	public EntityTofunian(World world) {
@@ -23,6 +28,25 @@ public class EntityTofunian extends EntityAnimal {
 		this.skinName = "tofunian";
 	}
 
+	@Override
+	protected void init() {
+		super.init();
+		this.entityData.define(16, (byte) 0);
+	}
+
+	public boolean isSit() {
+		return (this.entityData.getByte(16) & 4) != 0;
+	}
+
+	public void setSit(boolean flag) {
+		byte byte0 = this.entityData.getByte(16);
+		if (flag) {
+			this.entityData.set(16, (byte) (byte0 | 4));
+		} else {
+			this.entityData.set(16, (byte) (byte0 & 0xFFFFFFFB));
+		}
+	}
+
 	public void setHomePos(@Nullable Vec3d homePos) {
 		this.homePos = homePos;
 	}
@@ -30,6 +54,30 @@ public class EntityTofunian extends EntityAnimal {
 	@Nullable
 	public Vec3d getHomePos() {
 		return homePos;
+	}
+
+	@Override
+	protected void updatePlayerActionState() {
+		if (!this.isSit()) {
+			super.updatePlayerActionState();
+			if (random.nextInt(400) == 0) {
+				this.setSit(true);
+			}
+		} else {
+			if (random.nextInt(400) == 0) {
+				this.setSit(false);
+			}
+		}
+		sitAnimation.animateWhen(this.isSit(), this.tickCount);
+	}
+
+	@Override
+	public boolean hurt(Entity entity, int damage, DamageType type) {
+		boolean flag = super.hurt(entity, damage, type);
+		if (flag && this.isSit()) {
+			this.setSit(false);
+		}
+		return flag;
 	}
 
 	@Override
@@ -50,6 +98,7 @@ public class EntityTofunian extends EntityAnimal {
 			tag.putDouble("homeY", this.homePos.yCoord);
 			tag.putDouble("homeZ", this.homePos.zCoord);
 		}
+		tag.putBoolean("Sitting", this.isSit());
 	}
 
 	@Override
@@ -58,6 +107,7 @@ public class EntityTofunian extends EntityAnimal {
 		if (tag.containsKey("homeX") && tag.containsKey("homeY") && tag.containsKey("homeZ")) {
 			this.setHomePos(Vec3d.createVector(tag.getDouble("homeX"), tag.getDouble("homeY"), tag.getDouble("homeZ")));
 		}
+		this.setSit(tag.getBoolean("Sitting"));
 	}
 
 	@Override
