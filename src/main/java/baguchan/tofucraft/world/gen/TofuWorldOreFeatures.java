@@ -16,7 +16,9 @@ import java.util.function.Function;
 
 public class TofuWorldOreFeatures extends GeneratorFeatures {
 	@ApiStatus.Internal
-	public List<Float> rangeModifierList = new ArrayList();
+	public List<Float> startingRangeList = new ArrayList();
+	@ApiStatus.Internal
+	public List<Float> endingRangeList = new ArrayList();
 	public OreConfig config;
 
 	public TofuWorldOreFeatures(OreConfig config) {
@@ -34,8 +36,13 @@ public class TofuWorldOreFeatures extends GeneratorFeatures {
 	}
 
 	public void addFeature(Function<Parameters, WorldFeature> featureFunction, Object[] featureParameters, Function<Parameters, Integer> densityFunction, Object[] densityParameters, float rangeModifier) {
+		this.addFeature(featureFunction, featureParameters, densityFunction, densityParameters, 0.0F, rangeModifier);
+	}
+
+	public void addFeature(Function<Parameters, WorldFeature> featureFunction, Object[] featureParameters, Function<Parameters, Integer> densityFunction, Object[] densityParameters, float startingRange, float endingRange) {
 		super.addFeature(featureFunction, featureParameters, densityFunction, densityParameters);
-		this.rangeModifierList.add(rangeModifier);
+		this.startingRangeList.add(startingRange);
+		this.endingRangeList.add(endingRange);
 	}
 
 	public void addManagedOreFeature(String modID, Block block, int defaultClusterSize, int defaultChances, float defaultRange) {
@@ -45,6 +52,13 @@ public class TofuWorldOreFeatures extends GeneratorFeatures {
 
 	public void addManagedOreFeature(Block block) {
 		String currentBlock = block.getKey();
-		this.addFeature(new WorldFeatureTofuOre(block.id, (Integer) this.config.clusterSize.get(currentBlock)), (Integer) this.config.chancesPerChunk.get(currentBlock), (Float) this.config.verticalRange.get(currentBlock));
+		this.addFeature((x) -> {
+			return new WorldFeatureTofuOre(block.id, (Integer) this.config.clusterSize.get(currentBlock));
+		}, (Object[]) null, OverworldFunctions::getStandardOreBiomesDensity, new Object[]{this.config.chancesPerChunk.get(currentBlock), null}, (Float) this.config.verticalStartingRange.get(currentBlock), (Float) this.config.verticalEndingRange.get(currentBlock));
+	}
+
+	public void addManagedOreFeature(String modID, Block block, int defaultClusterSize, int defaultChances, float defaultStartingRange, float defaultEndingRange) {
+		this.config.setOreValues(modID, block, defaultClusterSize, defaultChances, defaultStartingRange, defaultEndingRange);
+		this.addManagedOreFeature(block);
 	}
 }
