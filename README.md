@@ -8,6 +8,8 @@ Soybean. Tofu. Tofu... something?
 
 ## Differences from the original
 
+Tofu Portal (yep. need to old place style)
+
 Tofu Village generation
 
 beta like gameplay
