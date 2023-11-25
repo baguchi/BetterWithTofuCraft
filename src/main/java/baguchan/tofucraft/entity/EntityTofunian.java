@@ -81,6 +81,13 @@ public class EntityTofunian extends EntityAnimal {
 	}
 
 	@Override
+	protected void jump() {
+		if (!this.isSit()) {
+			super.jump();
+		}
+	}
+
+	@Override
 	protected void roamRandomPath() {
 		super.roamRandomPath();
 		if (this.homePos != null) {
