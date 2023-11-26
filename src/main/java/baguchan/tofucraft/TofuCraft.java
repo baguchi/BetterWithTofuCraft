@@ -50,9 +50,9 @@ public class TofuCraft implements ModInitializer, PreLaunchEntrypoint {
 
 	private void handleConfig() {
 		Properties prop = new Properties();
-		prop.setProperty("starting_block_id", "600");
-		prop.setProperty("starting_item_id", "3000");
-		prop.setProperty("starting_entity_id", "1000");
+		prop.setProperty("starting_block_id", "2200");
+		prop.setProperty("starting_item_id", "4000");
+		prop.setProperty("starting_entity_id", "2000");
 		prop.setProperty("tofu_world_id", "3");
 		ConfigHandler config = new ConfigHandler(MOD_ID, prop);
 		IDUtils.initIds(
