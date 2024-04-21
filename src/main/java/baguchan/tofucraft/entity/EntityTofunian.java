@@ -61,13 +61,13 @@ public class EntityTofunian extends EntityAnimal {
 
 	@Override
 	protected void updatePlayerActionState() {
-		if (!this.isSit()) {
+		if (!this.isSit() && (this.isInWater() || this.onGround)) {
 			super.updatePlayerActionState();
 			if (random.nextInt(400) == 0) {
 				this.setSit(true);
 			}
 		} else {
-			if (random.nextInt(400) == 0) {
+			if (random.nextInt(400) == 0 || (this.isInWater() || this.onGround)) {
 				this.setSit(false);
 			}
 		}
