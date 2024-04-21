@@ -28,8 +28,6 @@ public class ModelTofunian extends BenchEntityModel {
 		if (this.tofunian != null) {
 			Animation animation = AnimationHelper.getOrCreateEntityAnimation(MOD_ID, "tofunian.animation");
 			animateWalk(animation.getAnimations().get("walk"), limbSwing, limbYaw, 2.0F, 0.5F);
-
-			Animation sit = AnimationHelper.getOrCreateEntityAnimation(MOD_ID, "tofunian.animation");
 			animate(tofunian.sitAnimation, animation.getAnimations().get("sit_down"), ticksExisted, 1F);
 		}
 	}
