@@ -67,7 +67,7 @@ public class BlockFluidSoyStill extends BlockFluidStill {
 				} else {
 					world.setBlockWithNotify(x, y, z, Block.cobbleBasalt.id);
 				}
-				this.triggerLavaMixEffects(world, x, y, z);
+				this.fizz(world, x, y, z);
 			}
 		}
 		if (this.blockMaterial == Material.water) {
@@ -89,7 +89,7 @@ public class BlockFluidSoyStill extends BlockFluidStill {
 			}
 			if (flag && (meta = world.getBlockMetadata(x, y, z)) == 0) {
 				world.setBlockWithNotify(x, y, z, Block.cobbleLimestone.id);
-				this.triggerLavaMixEffects(world, x, y, z);
+				this.fizz(world, x, y, z);
 			}
 		}
 	}

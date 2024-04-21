@@ -6,7 +6,7 @@ import net.minecraft.core.block.BlockPortal;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
-import net.minecraft.core.sound.SoundType;
+import net.minecraft.core.sound.SoundCategory;
 import net.minecraft.core.util.helper.MathHelper;
 import net.minecraft.core.util.phys.Vec3d;
 import net.minecraft.core.world.World;
@@ -53,7 +53,7 @@ public class ItemTofuStick extends Item {
 
 			if (world.getBlockId(i, j, k) == ((BlockPortal) ModBlocks.tofu_portal).portalFrameId && !world.isClientSide) {
 				if (((BlockPortal) ModBlocks.tofu_portal).tryToCreatePortal(world, i, j + 1, k)) {
-					world.playSoundEffect(SoundType.WORLD_SOUNDS, (double) i + 0.5, (double) j + 0.5, (double) k + 0.5, "fire.ignite", 1.0f, itemRand.nextFloat() * 0.4f + 0.8f);
+					world.playSoundEffect(entityplayer, SoundCategory.WORLD_SOUNDS, (double) i + 0.5, (double) j + 0.5, (double) k + 0.5, "fire.ignite", 1.0f, itemRand.nextFloat() * 0.4f + 0.8f);
 					itemstack.damageItem(1, entityplayer);
 					return itemstack;
 				}

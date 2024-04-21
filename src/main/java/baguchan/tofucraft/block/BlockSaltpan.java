@@ -55,7 +55,7 @@ public class BlockSaltpan extends useless.dragonfly.debug.block.BlockModel {
 		if (world.getBlock(x, y, z) == ModBlocks.saltpan) {
 			if (player.inventory.getCurrentItem() != null && player.inventory.getCurrentItem().getItem() == Item.bucketWater) {
 
-				world.playSoundAtEntity(player, "random.pop", 0.2f, 0.5f);
+				world.playSoundAtEntity(player, player, "random.pop", 0.2f, 0.5f);
 				world.setBlockWithNotify(x, y, z, ModBlocks.saltpan_water.id);
 				player.inventory.getCurrentItem().consumeItem(player);
 				player.inventory.insertItem(new ItemStack(Item.bucket), false);
@@ -63,8 +63,7 @@ public class BlockSaltpan extends useless.dragonfly.debug.block.BlockModel {
 			}
 		}
 		if (world.getBlock(x, y, z) == ModBlocks.saltpan_salt) {
-
-			world.playSoundAtEntity(player, "random.pop", 0.2f, 0.5f);
+			world.playSoundAtEntity(player, player, "random.pop", 0.2f, 0.5f);
 			world.setBlockWithNotify(x, y, z, ModBlocks.saltpan_bittern.id);
 			player.inventory.insertItem(new ItemStack(ModItems.salt), false);
 			return true;
@@ -73,7 +72,7 @@ public class BlockSaltpan extends useless.dragonfly.debug.block.BlockModel {
 		if (world.getBlock(x, y, z) == ModBlocks.saltpan_bittern) {
 			if (player.inventory.getCurrentItem() != null && player.inventory.getCurrentItem().getItem() == Item.jar) {
 
-				world.playSoundAtEntity(player, "random.pop", 0.2f, 0.5f);
+				world.playSoundAtEntity(player, player, "random.pop", 0.2f, 0.5f);
 				world.setBlockWithNotify(x, y, z, ModBlocks.saltpan.id);
 				player.inventory.getCurrentItem().consumeItem(player);
 				player.inventory.insertItem(new ItemStack(ModItems.bittern_jar), false);

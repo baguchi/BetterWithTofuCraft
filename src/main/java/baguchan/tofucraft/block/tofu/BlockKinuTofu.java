@@ -13,7 +13,7 @@ public class BlockKinuTofu extends BlockTofu {
 
 	public BlockKinuTofu(String key, int id, Material material) {
 		super(key, id, material);
-		this.setTickOnLoad(true);
+		this.setTicking(true);
 	}
 
 

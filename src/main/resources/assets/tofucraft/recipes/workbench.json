@@ -1,0 +1,259 @@
+[
+  {
+    "name": "tofucraft:workbench/kinu_tofu",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TT",
+      "TT"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "item.tofucraft.tofukinu",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "tile.tofucraft.momen_tofu",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/momen_tofu",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TT",
+      "TT"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "item.tofucraft.tofumomen",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "tile.tofucraft.momen_tofu",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/ishi_tofu",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TT",
+      "TT"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "item.tofucraft.tofuishi",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "tile.tofucraft.ishi_tofu",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/metal_tofu",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TT",
+      "TT"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "item.tofucraft.tofumetal",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "tile.tofucraft.metal_tofu",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/diamond_tofu",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TT",
+      "TT"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "item.tofucraft.tofudiamond",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "tile.tofucraft.diamond_tofu",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/tofu_diamond",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TTT",
+      "TTT",
+      "TTT"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "item.tofucraft.tofu_diamond_nugget",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofudiamond",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/tofu_diamond_block",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TT",
+      "TT"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "item.tofucraft.tofudiamond",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "tile.tofucraft.diamond_tofu",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/tofu_grilled_block",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TT",
+      "TT"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "item.tofucraft.tofugrilled",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "tile.tofucraft.grilled_tofu",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/saltpan",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "S S",
+      " B "
+    ],
+    "symbols": [
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "B",
+        "stack": {
+          "key": "tile.slab.cobble.stone",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "tile.tofucraft.saltpan",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/bucket_soymilk",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "S",
+      "B"
+    ],
+    "symbols": [
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.tofucraft.seeds_soybeans",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "B",
+        "stack": {
+          "key": "item.bucket",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.bucket_soymilk",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  }
+]

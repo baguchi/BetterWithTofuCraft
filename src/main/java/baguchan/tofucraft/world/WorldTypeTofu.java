@@ -76,6 +76,6 @@ public class WorldTypeTofu extends WorldTypeOverworld {
 
 	@Override
 	public boolean mayRespawn() {
-		return false;
+		return true;
 	}
 }

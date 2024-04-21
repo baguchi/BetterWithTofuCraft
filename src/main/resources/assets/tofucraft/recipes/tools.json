@@ -1,0 +1,662 @@
+[
+  {
+    "name": "tofucraft:workbench/kinu_sword",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "T",
+      "T",
+      "S"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.kinu_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_kinu_sword",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/momen_sword",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "T",
+      "T",
+      "S"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.momen_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_momen_sword",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/metal_sword",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "T",
+      "T",
+      "S"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.metal_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_metal_sword",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/diamond_sword",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "T",
+      "T",
+      "S"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.diamond_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_diamond_sword",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/kinu_pickaxe",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TTT",
+      " S ",
+      " S "
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.kinu_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_kinu_pickaxe",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/momen_pickaxe",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TTT",
+      " S ",
+      " S "
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.momen_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_momen_pickaxe",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/metal_pickaxe",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TTT",
+      " S ",
+      " S "
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.metal_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_metal_pickaxe",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/diamond_pickaxe",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TTT",
+      " S ",
+      " S "
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.diamond_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_diamond_pickaxe",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/kinu_axe",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TT",
+      "TS",
+      " S"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.kinu_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_kinu_axe",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/momen_axe",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TT",
+      "TS",
+      " S"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.momen_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_momen_axe",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/metal_axe",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TT",
+      "TS",
+      " S"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.metal_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_metal_axe",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/diamond_axe",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TT",
+      "TS",
+      " S"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.diamond_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_diamond_axe",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/kinu_shovel",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "T",
+      "S",
+      "S"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.kinu_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_kinu_shovel",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/momen_shovel",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "T",
+      "S",
+      "S"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.momen_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_momen_shovel",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/metal_shovel",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "T",
+      "S",
+      "S"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.metal_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_metal_shovel",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/diamond_shovel",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "T",
+      "S",
+      "S"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.diamond_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_diamond_shovel",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/kinu_hoe",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TT",
+      " S",
+      " S"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.kinu_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_kinu_hoe",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/momen_hoe",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TT",
+      " S",
+      " S"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.momen_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_momen_hoe",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/metal_hoe",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TT",
+      " S",
+      " S"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.metal_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_metal_hoe",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/diamond_hoe",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TT",
+      " S",
+      " S"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.diamond_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "key": "item.stick",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_diamond_hoe",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  }
+]

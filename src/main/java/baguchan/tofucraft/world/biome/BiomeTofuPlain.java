@@ -6,7 +6,8 @@ import net.minecraft.core.world.weather.Weather;
 
 public class BiomeTofuPlain extends Biome {
 
-	public BiomeTofuPlain() {
+	public BiomeTofuPlain(String key) {
+		super(key);
 		setBlockedWeathers(Weather.overworldRain, Weather.overworldStorm);
 		setColor(0xFFFFFF);
 		setTopBlock(ModBlocks.tofu_terrain.id);

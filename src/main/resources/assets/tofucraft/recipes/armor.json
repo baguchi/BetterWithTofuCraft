@@ -1,0 +1,394 @@
+[
+  {
+    "name": "tofucraft:workbench/kinu_helmet",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TTT",
+      "T T"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.kinu_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_kinu_helmet",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/momen_helmet",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TTT",
+      "T T"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.momen_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_momen_helmet",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/metal_helmet",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TTT",
+      "T T"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.metal_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_metal_helmet",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/diamond_helmet",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TTT",
+      "T T"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.diamond_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_diamond_helmet",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/kinu_chestplate",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "T T",
+      "TTT",
+      "TTT"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.kinu_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_kinu_chestplate",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/momen_chestplate",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "T T",
+      "TTT",
+      "TTT"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.momen_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_momen_chestplate",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/metal_chestplate",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "T T",
+      "TTT",
+      "TTT"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.metal_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_metal_chestplate",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/diamond_chestplate",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "T T",
+      "TTT",
+      "TTT"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.diamond_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_diamond_chestplate",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/kinu_leggings",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TTT",
+      "T T",
+      "T T"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.kinu_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_kinu_leggings",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/momen_leggings",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TTT",
+      "T T",
+      "T T"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.momen_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_momen_leggings",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/metal_leggings",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TTT",
+      "T T",
+      "T T"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.metal_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_metal_leggings",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/diamond_leggings",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "TTT",
+      "T T",
+      "T T"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.diamond_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_diamond_leggings",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/kinu_boots",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "T T",
+      "T T"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.kinu_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_kinu_boots",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/momen_boots",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "T T",
+      "T T"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.momen_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_momen_boots",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/metal_boots",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "T T",
+      "T T"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.metal_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_metal_boots",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  },
+  {
+    "name": "tofucraft:workbench/diamond_boots",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "T T",
+      "T T"
+    ],
+    "symbols": [
+      {
+        "symbol": "T",
+        "stack": {
+          "key": "tile.tofucraft.diamond_tofu",
+          "amount": 1,
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "key": "item.tofucraft.tofu_diamond_boots",
+      "amount": 1,
+      "meta": 0
+    },
+    "consumeContainers": false
+  }
+]

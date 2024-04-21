@@ -5,6 +5,7 @@ import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.util.helper.MathHelper;
 import net.minecraft.core.world.World;
 import net.minecraft.core.world.generate.MapGenBase;
+import net.minecraft.core.world.generate.chunk.ChunkGeneratorResult;
 
 import java.util.Random;
 
@@ -15,11 +16,11 @@ public class MapGenTofuCaves extends MapGenBase {
 		this.isAlpha = isAlpha;
 	}
 
-	protected void generateHubRoom(long seed, int baseChunkX, int baseChunkZ, short[] data, double blockX, double blockY, double blockZ) {
-		this.generateCave(seed, baseChunkX, baseChunkZ, data, blockX, blockY, blockZ, 1.0f + rand.nextFloat() * 6.0f, 0.0f, 0.0f, -1, -1, 0.5);
+	protected void generateHubRoom(long seed, int baseChunkX, int baseChunkZ, ChunkGeneratorResult result, double blockX, double blockY, double blockZ) {
+		this.generateCave(seed, baseChunkX, baseChunkZ, result, blockX, blockY, blockZ, 1.0f + rand.nextFloat() * 6.0f, 0.0f, 0.0f, -1, -1, 0.5);
 	}
 
-	protected void generateCave(long seed, int baseChunkX, int baseChunkZ, short[] data, double blockX, double blockY, double blockZ, float initialRadius, float rotHor, float rotVer, int startPos, int endPos, double heightMod) {
+	protected void generateCave(long seed, int baseChunkX, int baseChunkZ, ChunkGeneratorResult result, double blockX, double blockY, double blockZ, float initialRadius, float rotHor, float rotVer, int startPos, int endPos, double heightMod) {
 		boolean sharpRotVer;
 		double chunkMiddleX = baseChunkX * 16 + 8;
 		double chunkMiddleZ = baseChunkZ * 16 + 8;
@@ -53,8 +54,8 @@ public class MapGenTofuCaves extends MapGenBase {
 			rotVerOffset += (random.nextFloat() - random.nextFloat()) * random.nextFloat() * 2.0f;
 			rotHorOffset += (random.nextFloat() - random.nextFloat()) * random.nextFloat() * 4.0f;
 			if (!noBranches && startPos == branchPos && initialRadius > 1.0f) {
-				this.generateCave(random.nextLong(), baseChunkX, baseChunkZ, data, blockX, blockY, blockZ, random.nextFloat() * 0.5f + 0.5f, rotHor - 1.570796f, rotVer / 3.0f, startPos, endPos, 1.0);
-				this.generateCave(random.nextLong(), baseChunkX, baseChunkZ, data, blockX, blockY, blockZ, random.nextFloat() * 0.5f + 0.5f, rotHor + 1.570796f, rotVer / 3.0f, startPos, endPos, 1.0);
+				this.generateCave(random.nextLong(), baseChunkX, baseChunkZ, result, blockX, blockY, blockZ, random.nextFloat() * 0.5f + 0.5f, rotHor - 1.570796f, rotVer / 3.0f, startPos, endPos, 1.0);
+				this.generateCave(random.nextLong(), baseChunkX, baseChunkZ, result, blockX, blockY, blockZ, random.nextFloat() * 0.5f + 0.5f, rotHor + 1.570796f, rotVer / 3.0f, startPos, endPos, 1.0);
 				return;
 			}
 			if (noBranches || random.nextInt(4) != 0) {
@@ -82,8 +83,8 @@ public class MapGenTofuCaves extends MapGenBase {
 					if (minY < 1) {
 						minY = 1;
 					}
-					if (maxY > this.worldObj.getHeightBlocks() - 8) {
-						maxY = this.worldObj.getHeightBlocks() - 8;
+					if (maxY > 248) {
+						maxY = 248;
 					}
 					if (minZ < 0) {
 						minZ = 0;
@@ -95,9 +96,8 @@ public class MapGenTofuCaves extends MapGenBase {
 					for (x = minX; !hasHitWater && x < maxX; ++x) {
 						for (int z = minZ; !hasHitWater && z < maxZ; ++z) {
 							for (int y = maxY + 1; !hasHitWater && y >= minY - 1; --y) {
-								int index = (x * 16 + z) * this.worldObj.getHeightBlocks() + y;
-								int blockId = data[index] & 0xFFFF;
-								if (y < 0 || y >= this.worldObj.getHeightBlocks()) continue;
+								int blockId = result.getBlock(x, y, z);
+								if (y < 0 || y >= 256) continue;
 								if (Block.hasTag(blockId, BlockTags.IS_WATER)) {
 									hasHitWater = true;
 								}
@@ -111,33 +111,37 @@ public class MapGenTofuCaves extends MapGenBase {
 							double xPercentage = ((double) (x + baseChunkX * 16) + 0.5 - blockX) / width;
 							for (int z = minZ; z < maxZ; ++z) {
 								double zPercentage = ((double) (z + baseChunkZ * 16) + 0.5 - blockZ) / width;
-								int index = (x * 16 + z) * this.worldObj.getHeightBlocks() + maxY;
+								int yIndex = maxY;
 								boolean replaceTopBlock = false;
 								if (xPercentage * xPercentage + zPercentage * zPercentage >= 1.0) continue;
 								for (int y = maxY - 1; y >= minY; --y) {
 									double yPercentage = ((double) y + 0.5 - blockY) / height;
 									if (yPercentage > -0.7 && xPercentage * xPercentage + yPercentage * yPercentage + zPercentage * zPercentage < 1.0) {
-										int blockId = data[index] & 0xFFFF;
+										int blockId = result.getBlock(x, yIndex, z);
 										if (Block.hasTag(blockId, BlockTags.CAVE_GEN_REPLACES_SURFACE)) {
 											replaceTopBlock = true;
 										}
 										if (Block.hasTag(blockId, BlockTags.CAVES_CUT_THROUGH)) {
 											if (y < 10) {
-												data[index] = (short) Block.fluidLavaStill.id;
+												result.setBlock(x, yIndex, z, Block.fluidLavaStill.id);
 											} else {
-												data[index] = 0;
+												result.setBlock(x, yIndex, z, 0);
 												if (replaceTopBlock) {
-													int id = data[index - 1] & 0xFFFF;
+													int id = result.getBlock(x, yIndex - 1, z);
 													if (id == Block.dirt.id) {
-														data[index - 1] = this.isAlpha ? (short) Block.grassRetro.id : (short) Block.grass.id;
+														if (this.isAlpha) {
+															result.setBlock(x, yIndex - 1, z, Block.grassRetro.id);
+														} else {
+															result.setBlock(x, yIndex - 1, z, Block.grass.id);
+														}
 													} else if (id == Block.dirtScorched.id) {
-														data[index - 1] = (short) Block.grassScorched.id;
+														result.setBlock(x, yIndex - 1, z, Block.grassScorched.id);
 													}
 												}
 											}
 										}
 									}
-									--index;
+									--yIndex;
 								}
 							}
 						}
@@ -150,30 +154,25 @@ public class MapGenTofuCaves extends MapGenBase {
 	}
 
 	@Override
-	protected void doGeneration(World world, int chunkX, int chunkZ, int baseChunkX, int baseChunkZ, short[] data) {
+	protected void doGeneration(World world, int chunkX, int chunkZ, int baseChunkX, int baseChunkZ, ChunkGeneratorResult result) {
 		int cavesToGenerate = rand.nextInt(rand.nextInt(rand.nextInt(40) + 1) + 1);
 		if (rand.nextInt(15) != 0) {
 			cavesToGenerate = 0;
 		}
 		for (int i = 0; i < cavesToGenerate; ++i) {
 			double blockX = chunkX * 16 + rand.nextInt(16);
-			double blockY = rand.nextInt(rand.nextInt(this.worldObj.getHeightBlocks() - 8) + 8);
+			double blockY = rand.nextInt(rand.nextInt(248) + 8);
 			double blockZ = chunkZ * 16 + rand.nextInt(16);
-			float heightScaler = 1.0f;
-			if (blockY <= 128.0) {
-				heightScaler = (float) (128.0 - blockY) / 128.0f;
-				heightScaler *= (float) (rand.nextInt(16) + 1);
-			}
 			int numBranches = 1;
 			if (rand.nextInt(4) == 0) {
-				this.generateHubRoom(rand.nextLong(), baseChunkX, baseChunkZ, data, blockX, blockY, blockZ);
+				this.generateHubRoom(rand.nextLong(), baseChunkX, baseChunkZ, result, blockX, blockY, blockZ);
 				numBranches += rand.nextInt(4);
 			}
 			for (int l1 = 0; l1 < numBranches; ++l1) {
-				float f = rand.nextFloat() * 3.141593f * 2.0f;
+				float f = rand.nextFloat() * (float) Math.PI * 2.0f;
 				float f1 = (rand.nextFloat() - 0.5f) * 2.0f / 8.0f;
 				float initialRadius = rand.nextFloat() * 2.0f + rand.nextFloat();
-				this.generateCave(rand.nextLong(), baseChunkX, baseChunkZ, data, blockX, blockY, blockZ, initialRadius, f, f1, 0, 0, 1.0);
+				this.generateCave(rand.nextLong(), baseChunkX, baseChunkZ, result, blockX, blockY, blockZ, initialRadius, f, f1, 0, 0, 1.0);
 			}
 		}
 	}

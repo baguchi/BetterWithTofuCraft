@@ -1,11 +1,11 @@
 package baguchan.tofucraft.world;
 
 import net.minecraft.core.block.Block;
-import net.minecraft.core.data.registry.Registries;
 import net.minecraft.core.world.World;
 import net.minecraft.core.world.biome.Biome;
 import net.minecraft.core.world.biome.Biomes;
 import net.minecraft.core.world.chunk.Chunk;
+import net.minecraft.core.world.generate.chunk.ChunkGeneratorResult;
 import net.minecraft.core.world.generate.chunk.perlin.SurfaceGenerator;
 import net.minecraft.core.world.noise.BasePerlinNoise;
 import net.minecraft.core.world.noise.PerlinNoise;
@@ -31,8 +31,9 @@ public class SurfaceGeneratorTofuWorld implements SurfaceGenerator {
 		this(world, new PerlinNoise(world.getRandomSeed(), 4, 40), new PerlinNoise(world.getRandomSeed(), 4, 44), new PerlinNoise(world.getRandomSeed(), 8, 32), true);
 	}
 
+
 	@Override
-	public void generateSurface(Chunk chunk, short[] blocks) {
+	public void generateSurface(Chunk chunk, ChunkGeneratorResult result) {
 		int oceanY = this.world.getWorldType().getOceanY();
 		int minY = this.world.getWorldType().getMinY();
 		int maxY = this.world.getWorldType().getMaxY();
@@ -43,8 +44,6 @@ public class SurfaceGeneratorTofuWorld implements SurfaceGenerator {
 		int worldFillBlock = this.world.getWorldType().getFillerBlock();
 		Random rand = new Random((long) chunkX * 341873128712L + (long) chunkZ * 132897987541L);
 		double beachScale = 0.03125;
-		double[] sandBeachNoise = this.beachNoise.get(null, chunkX * 16, chunkZ * 16, 0.0, 16, 16, 1, beachScale, beachScale, 1.0);
-		double[] gravelBeachNoise = this.beachNoise.get(null, chunkX * 16, 109.0134, chunkZ * 16, 16, 1, 16, beachScale, 1.0, beachScale);
 		double[] soilThicknessNoise = this.soilNoise.get(null, chunkX * 16, chunkZ * 16, 0.0, 16, 16, 1, beachScale * 2.0, beachScale * 2.0, beachScale * 2.0);
 		double[] stoneLayerNoise = null;
 		double[] stoneLayerNoiseGranite = null;
@@ -56,8 +55,6 @@ public class SurfaceGeneratorTofuWorld implements SurfaceGenerator {
 		}
 		for (int z = 0; z < 16; ++z) {
 			for (int x = 0; x < 16; ++x) {
-				boolean generateSandBeach = sandBeachNoise[z + x * 16] + rand.nextDouble() * 0.2 > 0.0;
-				boolean generateGravelBeach = gravelBeachNoise[z + x * 16] + rand.nextDouble() * 0.2 > 3.0;
 				int soilThickness = (int) (soilThicknessNoise[z + x * 16] / 3.0 + 3.0 + rand.nextDouble() * 0.25);
 				boolean generateBasaltLayer = false;
 				boolean generateGraniteLayer = false;
@@ -78,13 +75,11 @@ public class SurfaceGeneratorTofuWorld implements SurfaceGenerator {
 				int fillerBlock = -1;
 				Biome lastBiome = null;
 				for (int y = maxY; y >= minY; --y) {
-					byte biomeId = chunk.biome[(y >> 3) * 16 * 16 + x * 16 + z];
-					Biome biome = Registries.BIOMES.getItemByNumericId(biomeId);
+					Biome biome = chunk.getBlockBiome(x, y, z);
 					if (biome == null) {
 						biome = this.world.getBiomeProvider().getBiome(chunkX * 16 + x, y >> 3, chunkZ * 16 + z);
 					}
-					int blockIndex = (x * 16 + z) * this.world.getHeightBlocks() + y;
-					short block = blocks[blockIndex];
+					int block = result.getBlock(x, y, z);
 					if ((biome != lastBiome || topBlock == -1 || fillerBlock == -1) && block == 0) {
 						topBlock = biome.topBlock;
 						fillerBlock = biome.fillerBlock;
@@ -102,31 +97,34 @@ public class SurfaceGeneratorTofuWorld implements SurfaceGenerator {
 						} else if (y >= minY + oceanY - 4 && y <= minY + oceanY + 1) {
 							topBlock = biome.topBlock;
 							fillerBlock = biome.fillerBlock;
-							if (biome == Biomes.OVERWORLD_SWAMPLAND || biome == Biomes.OVERWORLD_SWAMPLAND_MUDDY) {
-								topBlock = (short) Block.mud.id;
-								fillerBlock = (short) Block.mud.id;
-							}/* else if (generateGravelBeach) {
-								topBlock = 0;
-								fillerBlock = (short)Block.gravel.id;
-							} else if (generateSandBeach) {
-								topBlock = (short)Block.sand.id;
-								fillerBlock = (short)Block.sand.id;
-							}*/
 						}
 						if (y < minY + oceanY && topBlock == 0) {
 							topBlock = (short) oceanBlock;
 						}
 						currentLayerDepth = soilThickness;
 						if (y >= minY + oceanY - 1) {
-							blocks[blockIndex] = (short) topBlock;
+							result.setBlock(x, y, z, topBlock);
 							continue;
 						}
-						blocks[blockIndex] = (short) fillerBlock;
+						result.setBlock(x, y, z, fillerBlock);
 						continue;
 					}
+					/*if (this.generateStoneVariants && currentLayerDepth <= 0) {
+						if (y >= minY + basaltThicknessLevel - rand.nextInt(3) && y <= minY + 30 + basaltThicknessLevel - rand.nextInt(3) && generateBasaltLayer) {
+							result.setBlock(x, y, z, Block.basalt.id);
+							continue;
+						}
+						if (y >= minY + 64 + graniteThicknessLevel - rand.nextInt(3) && y <= minY + 128 + graniteThicknessLevel - rand.nextInt(3) && generateGraniteLayer) {
+							result.setBlock(x, y, z, Block.granite.id);
+							continue;
+						}
+						if (y < minY + 64 + limestoneThicknessLevel - rand.nextInt(3) || y > minY + 128 + limestoneThicknessLevel - rand.nextInt(3) || !generateLimestoneLayer) continue;
+						result.setBlock(x, y, z, Block.limestone.id);
+						continue;
+					}*/
 					if (currentLayerDepth > 0) {
 						--currentLayerDepth;
-						blocks[blockIndex] = (short) fillerBlock;
+						result.setBlock(x, y, z, fillerBlock);
 					}
 					if (currentLayerDepth != 0) continue;
 					if (biome == Biomes.OVERWORLD_DESERT && fillerBlock == Block.sand.id) {

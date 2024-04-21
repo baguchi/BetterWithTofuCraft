@@ -59,7 +59,7 @@ public class ItemBitternJar extends Item {
 			Block block = Block.blocksList[ModBlocks.kinu_tofu.id];
 			if (itemstack.consumeItem(entityplayer) && world.setBlockAndMetadataWithNotify(i, j, k, ModBlocks.kinu_tofu.id, 0)) {
 				block.onBlockPlaced(world, i, j, k, null, entityplayer, 0.0);
-				world.playBlockSoundEffect((float) i + 0.5f, (float) j + 0.5f, (float) k + 0.5f, block, EnumBlockSoundEffectType.PLACE);
+				world.playBlockSoundEffect(entityplayer, (float) i + 0.5f, (float) j + 0.5f, (float) k + 0.5f, block, EnumBlockSoundEffectType.PLACE);
 				entityplayer.swingItem();
 				entityplayer.inventory.insertItem(new ItemStack(Item.jar), false);
 				entityplayer.addStat(ModAchievement.HARDEN_TO_TOFU, 1);

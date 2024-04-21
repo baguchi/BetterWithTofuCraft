@@ -18,14 +18,17 @@ public class EntityTofunian extends EntityAnimal {
 	public EntityTofunian(World world) {
 		super(world);
 		this.scoreValue = 0;
-		this.health = 20;
 		this.heightOffset = 0.0F;
 		this.footSize = 0.5F;
 		this.moveSpeed = 0.85F;
-		this.highestSkinVariant = -1;
 		this.setSize(0.6F, 1.15F);
 		this.setPos(this.x, this.y, this.z);
 		this.skinName = "tofunian";
+	}
+
+	@Override
+	public int getMaxHealth() {
+		return 20;
 	}
 
 	@Override
@@ -128,7 +131,7 @@ public class EntityTofunian extends EntityAnimal {
 	}
 
 	@Override
-	protected String getLivingSound() {
+	public String getLivingSound() {
 		return "tofucraft.mob.tofunian.tofunian_ambient";
 	}
 

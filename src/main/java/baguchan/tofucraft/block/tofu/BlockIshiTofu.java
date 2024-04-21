@@ -14,7 +14,7 @@ public class BlockIshiTofu extends BlockTofu {
 
 	public BlockIshiTofu(String key, int id, Material material) {
 		super(key, id, material);
-		this.setTickOnLoad(true);
+		this.setTicking(true);
 	}
 
 	@Override

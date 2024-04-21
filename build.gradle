@@ -109,7 +109,7 @@ dependencies {
 	// If you do not need Halplibe you can comment this line out or delete this line
 	modImplementation "com.github.Turnip-Labs:bta-halplibe:${project.halplibe_version}"
 
-	modImplementation "ModMenu:ModMenu:2.0.0"
+	modImplementation "ModMenu:ModMenu:2.0.5"
 	modImplementation "DragonFly:dragonfly:${project.dragonfly_version}"
 	modImplementation "BetterAI-BTA:better_ai:1.5.0"
 	modImplementation "TerrainAPI:terrainapi:${project.terrain_api_version}"

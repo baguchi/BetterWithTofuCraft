@@ -18,16 +18,25 @@
     "main": [
 			"baguchan.tofucraft.TofuCraft"
 		],
-		"client": [
-			"baguchan.tofucraft.TofuCraftClient"
-		],
 		"terrain-api": [
 			"baguchan.tofucraft.TerrainAPIPlugin"
 		],
-		"preLaunch": [
+		"beforeGameStart": [
 			"baguchan.tofucraft.TofuCraft"
+		],
+		"afterGameStart": [
+			"baguchan.tofucraft.TofuCraft"
+		],
+		"beforeClientStart": [
+			"baguchan.tofucraft.TofuCraftClient"
+		],
+		"afterClientStart": [
+			"baguchan.tofucraft.TofuCraftClient"
+		],
+		"recipesReady": [
+			"baguchan.tofucraft.crafting.ModCraftings"
 		]
-  },
+	},
   "mixins": [
 		"tofucraft.mixins.json"
   ],

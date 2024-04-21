@@ -18,7 +18,6 @@ public class WorldFeatureTofuVillage extends WorldFeature {
 	int villageSize = 0;
 	int houseLimit;
 	int houseCount = 0;
-	boolean isCold = false;
 	int roadBlock;
 	int brickBlockA;
 	int brickBlockB;
@@ -68,6 +67,7 @@ public class WorldFeatureTofuVillage extends WorldFeature {
 		for (int x = blockX - width; x <= blockX + width; ++x) {
 			for (int z = blockZ - length; z <= blockZ + length; ++z) {
 				int y = world.getHeightValue(x, z) - 1;
+
 				if (rot == 0) {
 					world.setBlockWithNotify(x, y, z, this.brickBlockA);
 

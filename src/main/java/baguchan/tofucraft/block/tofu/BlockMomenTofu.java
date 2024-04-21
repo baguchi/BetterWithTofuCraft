@@ -14,7 +14,7 @@ public class BlockMomenTofu extends BlockTofu {
 
 	public BlockMomenTofu(String key, int id, Material material) {
 		super(key, id, material);
-		this.setTickOnLoad(true);
+		this.setTicking(true);
 	}
 
 	@Override

@@ -6,7 +6,7 @@ import net.minecraft.client.render.TextureFX;
 import net.minecraft.core.Global;
 import net.minecraft.core.achievement.Achievement;
 import net.minecraft.core.achievement.AchievementList;
-import net.minecraft.core.achievement.stat.StatBase;
+import net.minecraft.core.achievement.stat.Stat;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.util.helper.Side;
 import org.lwjgl.opengl.GL11;
@@ -21,7 +21,7 @@ public class ModAchievement extends AchievementPage {
 
 	public ModAchievement() {
 		super("TofuCraft", "achievements.page.tofucraft");
-		((StatBase) MAKE_BITTERN).registerStat();
+		((Stat) MAKE_BITTERN).registerStat();
 		achievementList.add(MAKE_BITTERN);
 		achievementList.add(HARDEN_TO_TOFU);
 	}

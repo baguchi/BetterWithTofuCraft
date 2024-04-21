@@ -4,7 +4,6 @@ import baguchan.tofucraft.TofuCraft;
 import baguchan.tofucraft.block.tofu.*;
 import baguchan.tofucraft.util.IDUtils;
 import net.minecraft.client.render.block.color.BlockColorWater;
-import net.minecraft.client.sound.block.BlockSounds;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockBedrock;
 import net.minecraft.core.block.BlockPortal;
@@ -13,6 +12,7 @@ import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.block.ItemBlock;
 import net.minecraft.core.item.tool.ItemToolPickaxe;
+import net.minecraft.core.sound.BlockSounds;
 import turniplabs.halplibe.helper.BlockBuilder;
 import useless.dragonfly.helper.ModelHelper;
 import useless.dragonfly.model.block.BlockModelDragonFly;
@@ -72,13 +72,13 @@ public class ModBlocks {
 		.setHardness(100.0f)
 		.setTags(BlockTags.IS_WATER, BlockTags.PLACE_OVERWRITES, BlockTags.NOT_IN_CREATIVE_MENU)
 		.setVisualUpdateOnMetadata()
-		.build(new BlockFluidSoyFlowing("soymilk_flow", IDUtils.getCurrBlockId(), Material.water).withLightOpacity(3).withDisabledStats());
+		.build(new BlockFluidSoyFlowing("soymilk_flow", IDUtils.getCurrBlockId(), Material.water).withLightBlock(3).withDisabledStats());
 	public static final Block soymilk = new BlockBuilder(TofuCraft.MOD_ID)
 		.setTextures("soymilk.png")
 		.setHardness(100.0f)
 		.setVisualUpdateOnMetadata()
 		.setTags(BlockTags.IS_WATER, BlockTags.PLACE_OVERWRITES, BlockTags.NOT_IN_CREATIVE_MENU)
-		.build(new BlockFluidSoyStill("soymilk", IDUtils.getCurrBlockId(), Material.water).withLightOpacity(3).withDisabledStats());
+		.build(new BlockFluidSoyStill("soymilk", IDUtils.getCurrBlockId(), Material.water).withLightBlock(3).withDisabledStats());
 	public static final Block soybean = new BlockBuilder(TofuCraft.MOD_ID)
 		.setHardness(0.0f)
 		.setVisualUpdateOnMetadata()

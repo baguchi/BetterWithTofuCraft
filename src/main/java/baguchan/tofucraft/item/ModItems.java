@@ -30,31 +30,31 @@ public class ModItems {
 
 
 	//armor
-	public static final ArmorMaterial armor_kinu = ArmorHelper.createArmorMaterial("tofu_kinu", 1, 0.0f, 0.0f, 0.0f, 15.0f);
+	public static final ArmorMaterial armor_kinu = ArmorHelper.createArmorMaterial(TofuCraft.MOD_ID, "tofu_kinu", 1, 0.0f, 0.0f, 0.0f, 15.0f);
 	public static final Item armorHelmetKinu = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Kinu Helmet", IDUtils.getCurrItemId(), armor_kinu, 0), "tofu_kinu_helmet", "tofu_kinu_helmet.png");
 	public static final Item armorChestplateKinu = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Kinu Chestplate", IDUtils.getCurrItemId(), armor_kinu, 1), "tofu_kinu_chestplate", "tofu_kinu_chestplate.png");
 	public static final Item armorLeggingsKinu = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Kinu Leggings", IDUtils.getCurrItemId(), armor_kinu, 2), "tofu_kinu_leggings", "tofu_kinu_leggings.png");
 	public static final Item armorBootsKinu = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Kinu Boots", IDUtils.getCurrItemId(), armor_kinu, 3), "tofu_kinu_boots", "tofu_kinu_boots.png");
 
 
-	public static final ArmorMaterial armor_momen = ArmorHelper.createArmorMaterial("tofu_momen", 1, 0.0f, 0.0f, 0.0f, 15.0f);
+	public static final ArmorMaterial armor_momen = ArmorHelper.createArmorMaterial(TofuCraft.MOD_ID, "tofu_momen", 1, 0.0f, 0.0f, 0.0f, 15.0f);
 	public static final Item armorHelmetMomen = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Momen Helmet", IDUtils.getCurrItemId(), armor_momen, 0), "tofu_momen_helmet", "tofu_momen_helmet.png");
 	public static final Item armorChestplateMomen = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Momen Chestplate", IDUtils.getCurrItemId(), armor_momen, 1), "tofu_momen_chestplate", "tofu_momen_chestplate.png");
 	public static final Item armorLeggingsMomen = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Momen Leggings", IDUtils.getCurrItemId(), armor_momen, 2), "tofu_momen_leggings", "tofu_momen_leggings.png");
 	public static final Item armorBootsMomen = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Momen Boots", IDUtils.getCurrItemId(), armor_momen, 3), "tofu_momen_boots", "tofu_momen_boots.png");
 
-	public static final ArmorMaterial armor_solid = ArmorHelper.createArmorMaterial("tofu_solid", 120, 30.0f, 30.0f, 25.0f, 30.0f);
+	public static final ArmorMaterial armor_solid = ArmorHelper.createArmorMaterial(TofuCraft.MOD_ID, "tofu_solid", 120, 30.0f, 30.0f, 25.0f, 30.0f);
 	public static final Item armorHelmetSolid = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Solid Helmet", IDUtils.getCurrItemId(), armor_solid, 0), "tofu_solid_helmet", "tofu_solid_helmet.png");
 	public static final Item armorChestplateSolid = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Solid Chestplate", IDUtils.getCurrItemId(), armor_solid, 1), "tofu_solid_chestplate", "tofu_solid_chestplate.png");
 	public static final Item armorLeggingsSolid = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Solid Leggings", IDUtils.getCurrItemId(), armor_solid, 2), "tofu_solid_leggings", "tofu_solid_leggings.png");
 	public static final Item armorBootsSolid = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Ishi Boots", IDUtils.getCurrItemId(), armor_solid, 3), "tofu_solid_boots", "tofu_solid_boots.png");
 
-	public static final ArmorMaterial armor_metal = ArmorHelper.createArmorMaterial("tofu_metal", 190, 42.5f, 42.5f, 42.5f, 42.5f);
+	public static final ArmorMaterial armor_metal = ArmorHelper.createArmorMaterial(TofuCraft.MOD_ID, "tofu_metal", 190, 42.5f, 42.5f, 42.5f, 42.5f);
 	public static final Item armorHelmetMetal = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Metal Helmet", IDUtils.getCurrItemId(), armor_metal, 0), "tofu_metal_helmet", "tofu_metal_helmet.png");
 	public static final Item armorChestplateMetal = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Metal Chestplate", IDUtils.getCurrItemId(), armor_metal, 1), "tofu_metal_chestplate", "tofu_metal_chestplate.png");
 	public static final Item armorLeggingsMetal = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Metal Leggings", IDUtils.getCurrItemId(), armor_metal, 2), "tofu_metal_leggings", "tofu_metal_leggings.png");
 	public static final Item armorBootsMetal = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Metal Boots", IDUtils.getCurrItemId(), armor_metal, 3), "tofu_metal_boots", "tofu_metal_boots.png");
-	public static final ArmorMaterial armor_tofu_diamond = ArmorHelper.createArmorMaterial("tofu_diamond", 1000, 70.0f, 70.0f, 70.0f, 100.0f);
+	public static final ArmorMaterial armor_tofu_diamond = ArmorHelper.createArmorMaterial(TofuCraft.MOD_ID, "tofu_diamond", 1000, 70.0f, 70.0f, 70.0f, 100.0f);
 	public static final Item armorHelmetTofuDiamond = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Diamond Helmet", IDUtils.getCurrItemId(), armor_tofu_diamond, 0), "tofu_diamond_helmet", "tofu_diamond_helmet.png");
 	public static final Item armorChestplateTofuDiamond = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Diamond Chestplate", IDUtils.getCurrItemId(), armor_tofu_diamond, 1), "tofu_diamond_chestplate", "tofu_diamond_chestplate.png");
 	public static final Item armorLeggingsTofuDiamond = ItemHelper.createItem(TofuCraft.MOD_ID, new ItemArmor("Tofu Diamond Leggings", IDUtils.getCurrItemId(), armor_tofu_diamond, 2), "tofu_diamond_leggings", "tofu_diamond_leggings.png");

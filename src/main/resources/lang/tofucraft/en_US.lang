@@ -107,6 +107,6 @@ achievement.tofucraft.make_bittern.desc=Smelt the water bucket and make bittern.
 achievement.tofucraft.harden_to_tofu=Harder!
 achievement.tofucraft.harden_to_tofu.desc=use bittern jar to soymilk.
 
-tofucraft.biome.tofu_plain=Tofu Plain
+biome.tofucraft.biome.tofu_plain=Tofu Plain
 tofucraft.worldtype.tofu=Tofu World
 dimension.tofucraft.dimension.tofu.name=Tofu World
