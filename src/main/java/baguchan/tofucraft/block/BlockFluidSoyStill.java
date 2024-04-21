@@ -1,12 +1,14 @@
 package baguchan.tofucraft.block;
 
+import baguchan.better_ai.api.IBlockPathGetter;
+import baguchan.better_ai.util.BlockPath;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockFluidStill;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.world.World;
 
-public class BlockFluidSoyStill extends BlockFluidStill {
+public class BlockFluidSoyStill extends BlockFluidStill implements IBlockPathGetter {
 	public BlockFluidSoyStill(String name, int openIds, Material soymilkMaterial) {
 		super(name, openIds, soymilkMaterial);
 	}
@@ -96,5 +98,10 @@ public class BlockFluidSoyStill extends BlockFluidStill {
 	@Override
 	public int tickRate() {
 		return 5;
+	}
+
+	@Override
+	public BlockPath getBlockPath() {
+		return BlockPath.WATER;
 	}
 }

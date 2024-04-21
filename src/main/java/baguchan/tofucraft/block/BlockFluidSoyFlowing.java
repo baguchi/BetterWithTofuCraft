@@ -1,5 +1,7 @@
 package baguchan.tofucraft.block;
 
+import baguchan.better_ai.api.IBlockPathGetter;
+import baguchan.better_ai.util.BlockPath;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockFluid;
 import net.minecraft.core.block.BlockFluidFlowing;
@@ -11,7 +13,7 @@ import net.minecraft.core.world.World;
 
 import java.util.Random;
 
-public class BlockFluidSoyFlowing extends BlockFluidFlowing {
+public class BlockFluidSoyFlowing extends BlockFluidFlowing implements IBlockPathGetter {
 	int numAdjacentSources = 0;
 	boolean[] isOptimalFlowDirection = new boolean[4];
 	int[] flowCost = new int[4];
@@ -201,5 +203,10 @@ public class BlockFluidSoyFlowing extends BlockFluidFlowing {
 	@Override
 	public int tickRate() {
 		return 5;
+	}
+
+	@Override
+	public BlockPath getBlockPath() {
+		return BlockPath.WATER;
 	}
 }
