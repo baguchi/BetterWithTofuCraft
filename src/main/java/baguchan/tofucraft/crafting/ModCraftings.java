@@ -36,6 +36,7 @@ public class ModCraftings implements RecipeEntrypoint {
 
 	@Override
 	public void initNamespaces() {
-
+		RecipeEntrypoint.super.initNamespaces();
+		RecipeBuilder.initNameSpace(TofuCraft.MOD_ID);
 	}
 }
